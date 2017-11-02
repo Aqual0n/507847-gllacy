@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Вячеслав Лашкин](https://up.htmlacademy.ru/htmlcss/19/user/507847).
-* Наставник: [Гоша Егорян](https://htmlacademy.ru/profile/id85633).
+* Наставник: [Гоша Егорян](https://up.htmlacademy.ru/htmlcss/19/user/85633).
 
 ---
 
