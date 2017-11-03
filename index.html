@@ -1,12 +1,94 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Глейси</title>
-  </head>
-  <body>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML Academy: Глейси</title>
+	</head>
+	<body>
+		<!-- Начало шапки сайта -->
+		<header class="page-header">
+			<h2 class="visually-hidden">Главная страница магазина "Глейси"</h2>
+			<img src="img/header-logo.png" alt="Логотип магазина <<Глейси>>" class="header-logo" width="154" height="63">
+			<!-- Основная навигация -->
+			<nav class="main-navigation">
+				<ul class="main-navigation-list">
+					<li>
+						<a href="#">Каталог</a>
+						<ul class="drop-down-list">
+							<li><a href="#">Новинки</a></li>
+							<li><a href="#">Сливочное</a></li>
+							<li><a href="#">Щербеты</a></li>
+							<li><a href="#">Фруктовый лёд</a></li>
+							<li><a href="#">Мелорин</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Доставка и оплата</a></li>
+					<li><a href="#">О Компании</a></li>
+				</ul>
+				<!-- Пользовательская навигация -->
+				<ul class="side-navigation-list">
+					<!-- Поиск -->
+					<li class="search">
+						<span class="search-icon"></span>
+						<form action="#" method="get">
+							<input type="text">
+						</form>
+					</li>
+					<!-- Форма логина -->
+					<li class="login">
+						<a href="#" class="login-link">Вход</a>
+						<div class="login-form-wrapper">
+							<form class="login-form" action="#" method="post">
+								<input type="email" placeholder="Электронная почта">
+								<input type="password" placeholder="Пароль">
+								<input class="button" type="submit" value="Войти">
+							</form>
+							<a class="login-form-link" href="#">Забыли пароль?</a>
+							<a class="login-form-link" href="#">Новая регистрация</a>
+						</div>
+					</li>
+					<!-- Корзина -->
+					<li class="cart">
+						<a href="#" class="cart-link">Пусто</a>
+					</li>
+				</ul>
+			</nav>
+			<!-- Номер телефона -->
+			<p class="phone-number">
+				С 10 до 20, ежедневно<br>
+				<span class="number-itself">8 812 450-25-25</span>
+			</p>
+		</header>
+		<!-- Конец шапки сайта -->
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Базовый HTML и CSS</a>».</p>
+		<!-- Здесь будет размечен слайдер -->
 
-  </body>
+		<!-- Начало основной части контента -->
+		<main>
+			<!-- Блок с промо-ниформацией -->
+			<section class="banner free-raspberries">
+				<h2 class="section-title">Малинка даром</h2>
+				<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+				<a href="№" class="button"></a>
+			</section>
+
+			<section class="banner free-chocolate">
+				<h2 class="section-title">Шоколадки даром</h2>
+				<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+				<a href="№" class="button"></a>
+			</section>
+		</main>
+
+		<!-- Разметка попапа -->
+		<section class="popup feedback-form">
+			<h3>Мы обязательно вам ответим!</h3>
+			<form action="#" method="post">
+				<input type="text" name="fullname" placeholder="Как вас зовут?">
+				<input type="email" name="email" placeholder="Ваша почта для ответа?">
+				<textarea name="feedback-text" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
+				<input type="submit" class="button" value="Отправить">
+			</form>
+			<span class="popup-close">x</span>
+		</section>
+	</body>
 </html>
