@@ -5,13 +5,13 @@
     <title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-  </head>
-  <body>
     <style>
     body{
       background-color: #95ab9f;
     }
     </style>
+  </head>
+  <body>
     <!-- Начало шапки сайта -->
     <header class="page-header">
       <a href="index.html">
@@ -37,17 +37,20 @@
         <ul class="side-navigation-list">
           <!-- Поиск -->
           <li class="search">
-            <span class="search-icon">Поиск</span>
-            <form action="#" method="get">
-              <input type="text">
+            <button type="button" class="search-icon" aria-label="Поиск"></button>
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+              <label class="visually-hidden" for="search-text-field">Поиск</label>
+              <input type="text" id="search-text-field" name="search-text" placeholder="Что ищем?">
             </form>
           </li>
           <!-- Форма логина -->
           <li class="login">
             <a href="#" class="login-link">Вход</a>
-            <form class="login-form" action="#" method="post">
-              <input type="email" placeholder="Электронная почта">
-              <input type="password" placeholder="Пароль">
+            <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+              <label for="log-email" class="visually-hidden">Ваша электронная почта для логина</label>
+              <input type="email" id="log-email" name="email" placeholder="Электронная почта">
+              <label for="log-password"  class="visually-hidden">Ваша электронная почта для логина</label>
+              <input type="password" id="log-password" name="password" placeholder="Пароль">
               <input class="button" type="submit" value="Войти">
               <a class="login-form-link" href="#">Забыли пароль?</a>
               <a class="login-form-link" href="#">Регистрация</a>
@@ -55,20 +58,24 @@
           </li>
           <!-- Корзина -->
           <li class="cart">
-            <a href="#" class="cart-link">2 товара</a>
+            <a href="#" class="cart-link" aria-label="Корзина">2 товара</a>
             <section class="cart-wrapper">
-              <h2 class="visually-hidden">Ваша корзина</h2>
+              <h2 class="visually-hidden">В вашей корзине есть:</h2>
               <table class="cart-item-description">
                 <tr class="orange-jam">
-                  <td class="delete-item">x</td>
-                  <td><img src="img/min-icecreams/icecream-1.min.png" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
+                  <td class="delete-item">
+                    <button type="button" class="delete-item-button">Удалить.</button>
+                  </td>
+                  <td><img src="img/min-icecreams/icecream-1.min.jpg" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
                   <td>Пломбир с апельсиновым джемом</td>
                   <td>1,5 кг х <span class="cart-item-price">200 руб.</span></td>
                   <td>300руб.</td>
                 </tr>
                 <tr class="strawberry-white-chocolate">
-                  <td class="delete-item">x</td>
-                  <td><img src="img/min-icecreams/icecream-3.min.png" width="33" height="33" alt="Клубничный пломбир"></td>
+                  <td class="delete-item">
+                    <button type="button" class="delete-item-button">Удалить.</button>
+                  </td>
+                  <td><img src="img/min-icecreams/icecream-3.min.jpg" width="33" height="33" alt="Клубничный пломбир"></td>
                   <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                   <td>1,5 кг х <span class="cart-item-price">300 руб.</span></td>
                   <td>450руб.</td>
@@ -82,13 +89,14 @@
         </ul>
       </nav>
       <!-- Навигация по сайту -->
-      <ul class="breadcrumbs">
+      <ul class="breadcrumbs" aria-label="Навигация по сайту">
         <li><a href="index.html">Главная</a></li>
         <li><a href="#">Каталог</a></li>
         <li class="breadcrumps-current">Сливочное</li>
       </ul>
       <!-- Номер телефона -->
       <p class="phone-number">
+        <b class="visually-hidden">Наш номер телефона:</b>
         С 10 до 20, ежедневно<br>
         <span class="number-itself">8 812 450-25-25</span>
       </p>
@@ -101,7 +109,7 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтры мороженого</h2>
         <!-- Форма фильтров -->
-        <form action="#" method="get">
+        <form action="https://echo.htmlacademy.ru" method="get">
           <!-- Сортировка -->
           <label for="sort">Сортировка</label>
           <select name="sort" id="sort">
@@ -112,7 +120,7 @@
           </select>
           <!-- Бегунок по цене -->
           <label for="price-range">Цена: 100 руб. – 500 руб.</label>
-          <input id="price-range" type="range" min="100" max="500">
+          <input id="price-range" name="price-range" type="range" min="100" max="500">
           <!-- Выбор жирности -->
           <fieldset>
             <legend>Жирность</legend>
@@ -131,7 +139,7 @@
             <label><input type="checkbox" name="jams">Джемы </label>
           </fieldset>
           <!-- Кнопка отправки формы -->
-          <input type="submit" value="Применить" class="filter-submit">
+          <input type="submit" value="Применить" aria-label="Кнопка отправки формы" class="filter-submit">
         </form>
       </section>
       <!-- Список товаров -->
@@ -237,7 +245,7 @@
           </li>
         </ul>
         <!-- Пагинация -->
-        <ul class="pagination">
+        <ul class="pagination" aria-label="Переключение страниц с мороженым">
           <li><a href="#">&lt;</a></li>
           <li class="pagination-item pagination-item-current"><a href="#">1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
@@ -252,6 +260,7 @@
     <!-- Начало подвала -->
     <footer class="page-footer">
       <!-- Социальный блок -->
+      <h3 class="visually-hidden">Список социальных ссылок</h3>
       <ul class="social-list">
         <li><a href="#" class="tw">Твиттер</a></li>
         <li><a href="#" class="in">Инстаграм</a></li>
@@ -259,6 +268,7 @@
         <li><a href="#" class="vk">Вконтакте</a></li>
       </ul>
       <!-- Блок для поставщиков -->
+      <h3 class="visually-hidden">Для поставщиков</h3>
       <ul class="for-providers-list">
         <li><a href="#">Для поставщиков</a></li>
         <li><a href="#">Наши документы</a></li>
@@ -266,6 +276,7 @@
         <li><a href="#">Экологические стандарты</a></li>
       </ul>
       <!-- Копирайт -->
+      <h3 class="visually-hidden">Копирайт</h3>
       <div class="copyright-wrapper">
         <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="125" height="39" alt="Логотип Html Academy"></a>
         <span class="copyright-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</span>

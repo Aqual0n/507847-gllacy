@@ -5,15 +5,15 @@
 		<title>HTML Academy: Глейси</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
-	</head>
-	<body>
     <style>
     body{
       background-color: #849d8f;
     }
     </style>
+	</head>
+	<body>
     <!-- Переключатель слайдера (будет доработан) -->
-    <input type="radio" name="slide-dot" class="toggle-slide-1">
+    <input type="radio" name="slide-dot" class="toggle-slide-1" checked>
     <input type="radio" name="slide-dot" class="toggle-slide-2">
     <input type="radio" name="slide-dot" class="toggle-slide-3">
     <!-- Обёртка для изменения цвета страницы-->
@@ -42,17 +42,20 @@
   				<ul class="side-navigation-list">
   					<!-- Поиск -->
   					<li class="search">
-  						<span class="search-icon">Поиск</span>
-  						<form action="#" method="get">
-  							<input type="text">
+  						<button type="button" class="search-icon">Поиск</button>
+  						<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                <label class="visually-hidden" for="search-text-field">Поиск</label>
+  							<input type="text" id="search-text-field" name="search-text" placeholder="Что ищем?">
   						</form>
   					</li>
   					<!-- Форма логина -->
   					<li class="login">
   						<a href="#" class="login-link">Вход</a>
-  						<form class="login-form" action="#" method="post">
-  							<input type="email" placeholder="Электронная почта">
-  							<input type="password" placeholder="Пароль">
+  						<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                <label for="log-email" class="visually-hidden">Ваша электронная почта для логина</label>
+  							<input type="email" id="log-email" name="email" placeholder="Электронная почта">
+                <label for="log-password"  class="visually-hidden">Ваша электронная почта для логина</label>
+  							<input type="password" id="log-password" name="password" placeholder="Пароль">
   							<input class="button" type="submit" value="Войти">
   							<a class="login-form-link" href="#">Забыли пароль?</a>
   							<a class="login-form-link" href="#">Регистрация</a>
@@ -60,15 +63,16 @@
   					</li>
   					<!-- Корзина -->
   					<li class="cart-empty">
-  						<a href="#" class="cart-link">Пусто</a>
+  						<a href="#" class="cart-link" aria-label="Корзина">Пусто</a>
   					</li>
   				</ul>
   			</nav>
   			<!-- Номер телефона -->
-  			<p class="phone-number">
-  				С 10 до 20, ежедневно<br>
-  				<span class="number-itself">8 812 450-25-25</span>
-  			</p>
+        <p class="phone-number">
+          <b class="visually-hidden">Наш номер телефона:</b>
+          С 10 до 20, ежедневно<br>
+          <span class="number-itself">8 812 450-25-25</span>
+        </p>
   		</header>
   		<!-- Конец шапки сайта -->
   		<!-- Начало основной части контента -->
@@ -77,16 +81,19 @@
         <section class="slider">
           <h2 class="visually-hidden">Слайдер главной страницы</h2>
           <div class="slide-1">
+            <h3>Первый слайд</h3>
             <img src="img/main-slider/icecream-slide-1.png" alt="Фотография мороженки">
             <b class="slide-description">Крем-брюле и пломбир с малиновым джемом</b>
             <a href="#" class="button">Дайте оба!</a>
           </div>
           <div class="slide-2">
+            <h3>Второй слайд</h3>
             <img src="img/main-slider/icecream-slide-2.png" alt="Фотография мороженки">
             <b class="slide-description">Шоколадный пломбир и лимонный сорбет</b>
             <a href="#" class="button">Дайте оба!</a>
           </div>
           <div class="slide-3">
+            <h3>Третий слайд</h3>
             <img src="img/main-slider/icecream-slide-3.png" alt="Фотография мороженки">
             <b class="slide-description">Пломбир с помадкой и клубничный щербет</b>
             <a href="#" class="button">Дайте оба!</a>
@@ -170,8 +177,8 @@
   			<section class="dispath">
   				<h2 class="visually-hidden">Подписка на рассылку</h2>
   				<p class="dispath-description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-  				<form action="#" class="dispath-form" method="post">
-  					<input type="email" placeholder="Электронная почта">
+  				<form action="https://echo.htmlacademy.ru" class="dispath-form" method="post">
+  					<input type="email" name="email" placeholder="Электронная почта">
   					<input class="button" type="submit" value="Отправить">
   				</form>
   			</section>
@@ -200,6 +207,7 @@
   		<!-- Начало подвала сайта -->
   		<footer class="page-footer">
   			<!-- Социальный блок -->
+        <h3 class="visually-hidden">Список социальных ссылок</h3>
   			<ul class="social-list">
   				<li><a href="#" class="tw">Твиттер</a></li>
   				<li><a href="#" class="in">Инстаграм</a></li>
@@ -207,6 +215,7 @@
   				<li><a href="#" class="vk">Вконтакте</a></li>
   			</ul>
   			<!-- Блок для поставщиков -->
+        <h3 class="visually-hidden">Для поставщиков</h3>
   			<ul class="for-providers-list">
   				<li><a href="#">Для поставщиков</a></li>
   				<li><a href="#">Наши документы</a></li>
@@ -214,6 +223,7 @@
   				<li><a href="#">Экологические стандарты</a></li>
   			</ul>
   			<!-- Копирайт -->
+        <h3 class="visually-hidden">Копирайт</h3>
   			<div class="copyright-wrapper">
   				<a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="125" height="39" alt="Логотип Html Academy"></a>
   				<span class="copyright-text">Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</span>
@@ -222,14 +232,20 @@
   		<!-- Конец подвала сайта -->
   		<!-- Разметка попапа -->
   		<section class="popup feedback-form">
-  			<h3>Мы обязательно вам ответим!</h3>
-  			<form action="#" method="post">
-  				<input type="text" name="fullname" placeholder="Как вас зовут?">
-  				<input type="email" name="email" placeholder="Ваша почта для ответа?">
-  				<textarea name="feedback-text" cols="30" rows="10" placeholder="Напишите что-нибудь..."></textarea>
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+  			<b>Мы обязательно вам ответим!</b>
+  			<form action="https://echo.htmlacademy.ru" method="post">
+          <label for="form-fullname" class="visually-hidden">Ваше имя:</label>
+  				<input type="text" id="form-fullname" name="fullname" placeholder="Как вас зовут?">
+
+          <label for="form-email" class="visually-hidden">Ваша электронная почта:</label>
+  				<input type="email" name="email" id="form-email" placeholder="Ваша почта для ответа?">
+
+          <label for="form-text" class="visually-hidden">Ваше сообщение:</label>
+  				<textarea name="feedback-text" id="form-text" placeholder="Напишите что-нибудь..."></textarea>
   				<input type="submit" class="button" value="Отправить">
   			</form>
-  			<span class="popup-close">x</span>
+  			<button type="button" class="popup-close">Закрыть</button>
   		</section>
     </div>
 	</body>
