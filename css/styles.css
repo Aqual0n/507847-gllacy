@@ -1,0 +1,112 @@
+/*Подключение шрифтов*/
+@font-face {
+  font-family: 'Roboto';
+  src:url(../fonts/roboto.woff) format('woff');
+  src:url(../fonts/roboto.woff2) format('woff2');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:url(../fonts/robotomedium.woff) format('woff');
+  src:url(../fonts/robotomedium.woff2) format('woff2');
+  font-weight: 150;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src:url(../fonts/robotobold.woff) format('woff');
+  src:url(../fonts/robotobold.woff2) format('woff2');
+  font-weight: bold;
+}
+
+/*Глобальные стили*/
+
+.container {
+  width: 95.5%;
+  min-width: 860px;
+  max-width: 1146px;
+  margin: 0 auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #95ab9f;
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 22px;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/*.item-wrapper img{
+  border-radius: 50%;
+}*/
+
+.button {
+  text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
+  background-image: -moz-linear-gradient(0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: -ms-linear-gradient(0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: linear-gradient(0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  border-radius: 30px;
+  display: block;
+  text-align: center;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-weight: bold;
+}
+
+.button:hover,
+.button:focus {
+  outline: none;
+  background-image: none;
+  background-color: #ef7862;
+}
+
+.button:active {
+  background-image: -moz-linear-gradient(90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -webkit-linear-gradient(90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  background-image: -ms-linear-gradient(90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
+  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+}
+
+.item-wrapper .button {
+  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+  height: 44px;
+  line-height: 44px;
+  width: 200px;
+  font-size: 18px;
+}
+
+/*Слайдер*/
+.slide-toggle-1:checked ~ .wrapper {
+  transition: background-color .3s;
+  background-color: #849d8f;
+}
+
+.slide-toggle-2:checked ~ .wrapper {
+  transition: background-color .3s;
+  background-color: #8996a6;
+}
+
+.slide-toggle-3:checked ~ .wrapper {
+  transition: background-color .3s;
+  background-color: #9d8b84;
+}
