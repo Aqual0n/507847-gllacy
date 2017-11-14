@@ -1,32 +1,39 @@
 /*Подключение шрифтов*/
 @font-face {
   font-family: 'Roboto';
-  src:url(../fonts/roboto.woff) format('woff');
-  src:url(../fonts/roboto.woff2) format('woff2');
+  src:
+    url(../fonts/roboto.woff2) format('woff2'),
+    url(../fonts/roboto.woff) format('woff');
   font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src:url(../fonts/robotomedium.woff) format('woff');
-  src:url(../fonts/robotomedium.woff2) format('woff2');
+  src:
+    url(../fonts/robotomedium.woff2) format('woff2'),
+    url(../fonts/robotomedium.woff) format('woff');
   font-weight: 150;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto';
-  src:url(../fonts/robotobold.woff) format('woff');
-  src:url(../fonts/robotobold.woff2) format('woff2');
+  src:
+    url(../fonts/robotobold.woff2) format('woff2'),
+    url(../fonts/robotobold.woff) format('woff');
   font-weight: bold;
+  font-style: normal;
 }
 
 /*Глобальные стили*/
 
 .container {
+  margin: 0 auto;
+
   width: 95.5%;
   min-width: 860px;
   max-width: 1146px;
-  margin: 0 auto;
 }
 
 .visually-hidden {
@@ -44,11 +51,13 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: #95ab9f;
+
   font-family: 'Roboto';
   font-size: 16px;
   line-height: 22px;
   color: #fff;
+
+  background-color: #95ab9f;
 }
 
 a {
@@ -93,6 +102,114 @@ a {
   line-height: 44px;
   width: 200px;
   font-size: 18px;
+}
+
+/*Стили для хедера*/
+  /*Стили для менюшки слева*/
+      /*Стилизация ссылок в менюшке*/
+.topper {
+  position: relative;
+  padding-bottom: 5px;
+}
+
+.topper > a {
+  padding: 0 14px;
+  display: inline-flex;
+  height: 32px;
+  line-height: 32px;
+  border-radius: 30px;
+  text-decoration: underline;
+}
+
+.topper > a:hover,
+.topper > a:focus {
+  outline: none;
+  background-color: #fff;
+  color: #000;
+}
+
+.topper-catalog:hover .drop-down-list,
+.topper-catalog:focus .drop-down-list,
+.catalog-link:hover .drop-down-list,
+.catalog-link:focus .drop-down-list {
+  display: block;
+}
+    /*Обнуление отступов и отключение маркировки для обоих списков */
+.drop-down-list,
+.main-navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+    /*Стилизация выпадашки*/
+.drop-down-list {
+  position: absolute;
+  display: none;
+  bottom: -160px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 143px;
+
+  font-family: 'Roboto';
+  text-align: left;
+  font-size: 14px;
+
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.drop-down-list li {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+
+  font-size: 14px;
+  height: 32px;
+  line-height: 32px;
+
+}
+
+.drop-down-list a {
+  padding-left: 15px;
+  display: block;
+  box-sizing: border-box;
+  width: 128px;
+
+  color: #000;
+}
+
+.drop-down-header {
+  font-family: 'Roboto';
+  font-weight: bold;
+  border-bottom: 1px solid #d1d0ce;
+}
+
+
+.drop-down-list li:hover,
+.drop-down-list li:focus {
+  background-color: #fbded7;
+}
+
+.drop-down-list li:active {
+  background-color: #f6b5a5
+}
+
+.current-pos {
+  background-color: #d07058;
+}
+
+.current-pos a {
+  color: #fff;
 }
 
 /*Слайдер*/
