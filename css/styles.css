@@ -47,7 +47,6 @@
   border: 0;
 }
 
-
 body {
   margin: 0;
   padding: 0;
@@ -146,6 +145,11 @@ a {
   display: -o-flex;
   display: flex;
 }
+
+.main-navigation-list {
+  width: 378px;
+  justify-content: space-between;
+}
     /*Стилизация выпадашки*/
 .drop-down-list {
   position: absolute;
@@ -176,7 +180,6 @@ a {
   font-size: 14px;
   height: 32px;
   line-height: 32px;
-
 }
 
 .drop-down-list a {
@@ -193,7 +196,6 @@ a {
   font-weight: bold;
   border-bottom: 1px solid #d1d0ce;
 }
-
 
 .drop-down-list li:hover,
 .drop-down-list li:focus {
