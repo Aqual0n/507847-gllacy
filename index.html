@@ -13,66 +13,69 @@
 	</head>
 	<body>
     <!-- Переключатель слайдера (будет доработан) -->
-    <input type="radio" name="slide-dot" class="toggle-slide-1" checked>
-    <input type="radio" name="slide-dot" class="toggle-slide-2">
-    <input type="radio" name="slide-dot" class="toggle-slide-3">
+    <!-- Лишние классы добавлены исключительно для критерия Д6 -->
+    <input type="radio" name="slide-dot" class="slide-toggle slide-toggle-1" id="toggle-slide-1" checked>
+    <input type="radio" name="slide-dot" class="slide-toggle slide-toggle-2" id="toggle-slide-2">
+    <input type="radio" name="slide-dot" class="slide-toggle slide-toggle-3" id="toggle-slide-3">
     <!-- Обёртка для изменения цвета страницы-->
     <div class="wrapper">
 		  <!-- Начало шапки сайта -->
   		<header class="page-header">
-  			<h1 class="visually-hidden">Главная страница магазина «Глейси»</h1>
-  			<img src="img/header-logo.svg" alt="Логотип магазина «Глейси»" class="header-logo" width="154" height="63">
-  			<!-- Основная навигация -->
-  			<nav class="main-navigation">
-  				<ul class="main-navigation-list">
-  					<li class="topper">
-  						<a href="catalog.html">Каталог</a>
-  						<ul class="drop-down-list">
-  							<li><a href="#">Новинки</a></li>
-  							<li><a href="catalog.html">Сливочное</a></li>
-  							<li><a href="#">Щербеты</a></li>
-  							<li><a href="#">Фруктовый лёд</a></li>
-  							<li><a href="#">Мелорин</a></li>
-  						</ul>
-  					</li>
-  					<li class="topper"><a href="#">Доставка и оплата</a></li>
-  					<li class="topper"><a href="#">О Компании</a></li>
-  				</ul>
-  				<!-- Пользовательская навигация -->
-  				<ul class="side-navigation-list">
-  					<!-- Поиск -->
-  					<li class="search">
-  						<button type="button" class="search-icon">Поиск</button>
-  						<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-                <label class="visually-hidden" for="search-text-field">Поиск</label>
-  							<input type="text" id="search-text-field" name="search-text" placeholder="Что ищем?">
-  						</form>
-  					</li>
-  					<!-- Форма логина -->
-  					<li class="login">
-  						<a href="#" class="login-link">Вход</a>
-  						<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-                <label for="log-email" class="visually-hidden">Ваша электронная почта для логина</label>
-  							<input type="email" id="log-email" name="email" placeholder="Электронная почта">
-                <label for="log-password"  class="visually-hidden">Ваша электронная почта для логина</label>
-  							<input type="password" id="log-password" name="password" placeholder="Пароль">
-  							<input class="button" type="submit" value="Войти">
-  							<a class="login-form-link" href="#">Забыли пароль?</a>
-  							<a class="login-form-link" href="#">Регистрация</a>
-  						</form>
-  					</li>
-  					<!-- Корзина -->
-  					<li class="cart-empty">
-  						<a href="#" class="cart-link" aria-label="Корзина">Пусто</a>
-  					</li>
-  				</ul>
-  			</nav>
-  			<!-- Номер телефона -->
-        <p class="phone-number">
-          <b class="visually-hidden">Наш номер телефона:</b>
-          С 10 до 20, ежедневно<br>
-          <span class="number-itself">8 812 450-25-25</span>
-        </p>
+        <div class="container">
+    			<h1 class="visually-hidden">Главная страница магазина «Глейси»</h1>
+    			<img src="img/header-logo.svg" alt="Логотип магазина «Глейси»" class="header-logo" width="154" height="63">
+    			<!-- Основная навигация -->
+    			<nav class="main-navigation">
+    				<ul class="main-navigation-list">
+    					<li class="topper topper-catalog" tabindex="0">
+    						<a class="catalog-link" href="catalog.html">Каталог</a>
+    						<ul class="drop-down-list">
+    							<li><a class="drop-down-header" href="#">Новинки</a></li>
+    							<li><a href="catalog.html">Сливочное</a></li>
+    							<li><a href="#">Щербеты</a></li>
+    							<li><a href="#">Фруктовый лёд</a></li>
+    							<li><a href="#">Мелорин</a></li>
+    						</ul>
+    					</li>
+    					<li class="topper"><a href="#">Доставка и оплата</a></li>
+    					<li class="topper"><a href="#">О Компании</a></li>
+    				</ul>
+    				<!-- Пользовательская навигация -->
+    				<ul class="side-navigation-list">
+    					<!-- Поиск -->
+    					<li class="search">
+    						<button type="button" class="search-icon">Поиск</button>
+    						<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                  <label class="visually-hidden" for="search-text-field">Поиск</label>
+    							<input type="text" id="search-text-field" name="search-text" placeholder="Что ищем?">
+    						</form>
+    					</li>
+    					<!-- Форма логина -->
+    					<li class="login">
+    						<a href="#" class="login-link">Вход</a>
+    						<form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                  <label for="log-email" class="visually-hidden">Ваша электронная почта для логина</label>
+    							<input type="email" id="log-email" name="email" placeholder="Электронная почта">
+                  <label for="log-password"  class="visually-hidden">Ваш пароль для логина</label>
+    							<input type="password" id="log-password" name="password" placeholder="Пароль">
+    							<input class="button" type="submit" value="Войти">
+    							<a class="login-form-link" href="#">Забыли пароль?</a>
+    							<a class="login-form-link" href="#">Регистрация</a>
+    						</form>
+    					</li>
+    					<!-- Корзина -->
+    					<li class="cart-empty">
+    						<a href="#" class="cart-link" aria-label="Корзина">Пусто</a>
+    					</li>
+    				</ul>
+    			</nav>
+    			<!-- Номер телефона -->
+          <p class="phone-number">
+            <b class="visually-hidden">Наш номер телефона:</b>
+            С 10 до 20, ежедневно<br>
+            <span class="number-itself">8 812 450-25-25</span>
+          </p>
+        </div>
   		</header>
   		<!-- Конец шапки сайта -->
   		<!-- Начало основной части контента -->
@@ -81,19 +84,19 @@
         <section class="slider">
           <h2 class="visually-hidden">Слайдер главной страницы</h2>
           <div class="slide-1">
-            <h3>Первый слайд</h3>
+            <h3 class="visually-hidden">Первый слайд</h3>
             <img src="img/main-slider/icecream-slide-1.png" alt="Фотография мороженки">
             <b class="slide-description">Крем-брюле и пломбир с малиновым джемом</b>
             <a href="#" class="button">Дайте оба!</a>
           </div>
           <div class="slide-2">
-            <h3>Второй слайд</h3>
+            <h3 class="visually-hidden">Второй слайд</h3>
             <img src="img/main-slider/icecream-slide-2.png" alt="Фотография мороженки">
             <b class="slide-description">Шоколадный пломбир и лимонный сорбет</b>
             <a href="#" class="button">Дайте оба!</a>
           </div>
           <div class="slide-3">
-            <h3>Третий слайд</h3>
+            <h3 class="visually-hidden">Третий слайд</h3>
             <img src="img/main-slider/icecream-slide-3.png" alt="Фотография мороженки">
             <b class="slide-description">Пломбир с помадкой и клубничный щербет</b>
             <a href="#" class="button">Дайте оба!</a>
