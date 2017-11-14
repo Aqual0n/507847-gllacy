@@ -51,7 +51,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: 'Roboto';
+  font-family: 'Roboto', 'Arial', sans-serif;
   font-size: 16px;
   line-height: 22px;
   color: #fff;
@@ -69,16 +69,17 @@ a {
 }*/
 
 .button {
+  display: block;
+
+  text-align: center;
+  font-weight: bold;
+
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
   background-image: -moz-linear-gradient(0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background-image: -ms-linear-gradient(0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   background-image: linear-gradient(0deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
   border-radius: 30px;
-  display: block;
-  text-align: center;
-  font-family: 'Roboto', 'Arial', sans-serif;
-  font-weight: bold;
 }
 
 .button:hover,
@@ -92,11 +93,18 @@ a {
   background-image: -moz-linear-gradient(90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   background-image: -webkit-linear-gradient(90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
   background-image: -ms-linear-gradient(90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
+  box-shadow: inset 0px 2px 2px 0px rgb(148, 39, 24);
+}
+
+input.button {
+  border: none;
+  color: #fff;
+  line-height: 24px;
+  cursor: pointer;
 }
 
 .item-wrapper .button {
-  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
+  /*box-shadow: 0px 1px 2px 0px rgb(172, 16, 0);*/
   height: 44px;
   line-height: 44px;
   width: 200px;
@@ -115,7 +123,8 @@ a {
   padding: 0 14px;
   display: inline-flex;
   height: 32px;
-  line-height: 32px;
+  -ms-align-items: center;
+  align-items: center;
   border-radius: 30px;
   text-decoration: underline;
   font-weight: bold;
@@ -123,9 +132,21 @@ a {
 
 .topper:hover > a,
 .topper:focus > a {
+  text-decoration: none;
   outline: none;
   background-color: #fff;
   color: #000;
+}
+
+.topper:hover > a:active,
+.topper:focus > a:active {
+  background-color: rgba(248, 247, 244, 0.988);
+  box-shadow: inset 0px 2px 1px 0px rgb(105, 105, 105);
+}
+
+a.main-nav-current {
+  background-color: #d07058;
+  text-decoration: none;
 }
 
 /*.topper > a:hover,
@@ -169,7 +190,6 @@ a {
   box-sizing: border-box;
   width: 143px;
 
-  font-family: 'Roboto';
   text-align: left;
   font-size: 14px;
 
@@ -206,7 +226,6 @@ a {
 }
 
 .drop-down-header {
-  font-family: 'Roboto';
   font-weight: bold;
   border-bottom: 1px solid #d1d0ce;
 }
@@ -228,7 +247,70 @@ a {
   color: #fff;
 }
 
+/*Стилизация пользовательской навигации (базовая)*/
+.side-navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.login > a,
+.cart-empty > a,
+.cart > a {
+  font-weight: 150;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+/*Ссылки в форме*/
+
+.login-form a {
+  font-size: 13px;
+  line-height: 24px;
+  color: #323232;
+  text-decoration: underline;
+}
+
+/*Номер телефона*/
+
+.phone-number {
+  text-align: right;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: bold;
+}
+
+.number-itself {
+  font-size: 22px;
+  line-height: 24px;
+}
+
 /*Слайдер*/
+
+.slider .button {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+
+  width: 278px;
+  height: 63px;
+
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.slide-description {
+  font-size: 60px;
+  line-height: 60.35px;
+  font-weight: bold;
+}
+
+/*Переключатель фона*/
 .slide-toggle-1:checked ~ .wrapper {
   transition: background-color .3s;
   background-color: #849d8f;
