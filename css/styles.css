@@ -428,3 +428,160 @@ a.main-nav-current {
   text-align: center;
   /*width: сделаю в будущем;*/
 }
+
+/*Преимущества*/
+
+.features {
+  background-color: #eaddbf;
+  background-image: url(../img/backgrounds/wafer-bg.jpg);
+  color: #323232;
+}
+
+.shop-description {
+  font-weight: 150;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.features-list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.feature-item p::before {
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.icecream-feature::before {
+  content: url(../img/icons/icecream-icon.svg);
+}
+
+.cow-feature::before {
+  content: url(../img/icons/cow-icon.svg);
+}
+
+.leaf-feature::before {
+  content: url(../img/icons/leaf-icon.svg);
+}
+
+.thermometer-feature::before {
+  content: url(../img/icons/thermometer-icon.svg);
+}
+
+/*Блог*/
+
+.serving-ways-article {
+  background-color: #fff;
+  background-image: url(../img/backgrounds/strawberry-bg.jpg);
+  background-position: center center;
+
+  min-height: 220px;
+  color: #323232;
+}
+
+.blog-title {
+  font-weight: 150;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.article-title {
+  font-size: 24px;
+  line-height: 30px;
+  text-decoration: underline;
+  font-weight: bold;
+  color: #323232;
+}
+
+/*Рассылка*/
+
+.dispath {
+  min-height: 220px;
+  background-color: #f8f7f4;
+  color: #5a5a5a;
+}
+
+/*P. S: Рамку буду делать градиентами потом*/
+
+/*Адрес и карта*/
+
+.adress-descr {
+  position: absolute;
+  right: 2.25%;
+  top:50%;
+  transform: translateY(-50%);
+
+  padding-top: 33px;
+  padding-left: 25px;
+  width: 302px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  background-color: #fff;
+
+  font-size: 14px;
+  color: #323232;
+  line-height: 20px;
+
+  border-radius: 15px;
+  border-bottom: 1px solid #fff;
+}
+
+.adress-descr p {
+  width: 225px;
+  margin: 0;
+}
+
+p.adress {
+  margin-bottom: 20px;
+}
+
+.adress span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.phone-number {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+p.phone-order {
+  margin-bottom: 23px;
+}
+
+.map .button {
+  width: 251px;
+  height: 43px;
+  margin-bottom: 29px;
+
+  font-size: 18px;
+}
+/*Карта*/
+.map {
+  margin: 0 auto;
+  position: relative;
+
+  max-width: 1200px;
+  min-height: 430px;
+
+  background-image: url(../img/backgrounds/map-fallback-bg.jpg);
+  background-position: center center;
+}
