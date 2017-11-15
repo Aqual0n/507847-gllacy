@@ -385,6 +385,12 @@ a.main-nav-current {
   line-height: 16px;
 }
 
+.catalog-title {
+  font-size: 35px;
+  line-height: 41px;
+  font-weight: bold;
+}
+
 /*Слайдер*/
 
 .slider .button {
@@ -520,7 +526,7 @@ a.main-nav-current {
   font-weight: 150;
   text-decoration: underline;
   text-align: center;
-  /*width: сделаю в будущем;*/
+  max-width: 255px;/*Это временный пункт*/
 }
 
 /*Преимущества*/
@@ -749,4 +755,96 @@ p.phone-order {
 
 .copyright-text a {
   text-decoration: underline;
+}
+
+/*Форма сортировки в каталоге*/
+
+.sorting-form > label,
+.sorting-form legend {
+  font-weight: 150;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.sort-field label {
+  font-weight: 150;
+  line-height: 18px;
+}
+
+.sort-field {
+  border: none;
+  padding: 0;
+  background-color: rgba(255, 255, 255, .2);
+  border-radius: 30px;
+}
+
+/*Каталог*/
+
+.items-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.items-list .item-wrapper {
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+/*Пагинация*/
+
+.pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.pagination a,
+.pagination-arrow-deadend {
+  width: 25px;
+  height: 25px;
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+
+  font-weight: 150;
+  line-height: 18px;
+  border-radius: 50%;
+}
+
+.pagination-arrow-deadend {
+  cursor: default;
+}
+
+.pagination a:hover,
+.pagination a:focus {
+  background-color: rgba(255, 255, 255, .2)
+}
+
+.pagination-item-current a,
+.pagination a:active {
+  color: #000;
+  background-color: #fff;
 }
