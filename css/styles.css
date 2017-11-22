@@ -743,24 +743,60 @@ a.main-nav-current {
 
 /*Блок с промо-информацией*/
 
+.promo-info {
+  margin-top: -38px;
+}
+
 .banner {
   width: 48.86561954%;
+  border-radius: 25px;
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+
+  justify-content: flex-start;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  padding: 0 21px;
+
+  z-index: 2;
 }
 
 .banner p {
+  margin: 0;
+  margin-bottom: 43px;
+
   font-weight: bold;
   font-size: 18px;
 }
 
 .banner .button {
-  width: 165px;
+  padding: 0 21px;
   height: 46px;
 
   font-size: 18px;
   line-height: 24px;
+
+  margin-bottom: 23px;
+  margin-left: auto;
+
 }
 
 .section-title {
+  margin-top: 15px;
+  margin-bottom: 16px;
   font-weight: bold;
   font-size: 35px;
   line-height: 41px;
