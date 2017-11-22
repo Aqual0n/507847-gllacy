@@ -14,18 +14,18 @@
 	<body>
     <!-- Переключатель слайдера (будет доработан) -->
     <!-- Лишние классы добавлены исключительно для критерия Д6 -->
-    <input type="radio" name="slide-dot" class="slide-toggle slide-toggle-1" id="toggle-slide-1" checked>
-    <input type="radio" name="slide-dot" class="slide-toggle slide-toggle-2" id="toggle-slide-2">
-    <input type="radio" name="slide-dot" class="slide-toggle slide-toggle-3" id="toggle-slide-3">
+    <input type="radio" name="slide-dot" class="slide-toggle-1" id="toggle-slide-1" checked>
+    <input type="radio" name="slide-dot" class="slide-toggle-2" id="toggle-slide-2">
+    <input type="radio" name="slide-dot" class="slide-toggle-3" id="toggle-slide-3">
     <!-- Обёртка для изменения цвета страницы-->
     <div class="wrapper">
 		  <!-- Начало шапки сайта -->
   		<header class="page-header">
         <div class="container">
     			<h1 class="visually-hidden">Главная страница магазина «Глейси»</h1>
-    			<img src="img/header-logo.svg" alt="Логотип магазина «Глейси»" class="header-logo" width="154" height="63">
     			<!-- Основная навигация -->
     			<nav class="main-navigation">
+            <img src="img/header-logo.svg" alt="Логотип магазина «Глейси»" class="header-logo" width="154" height="63">
     				<ul class="main-navigation-list">
     					<li class="topper topper-catalog" tabindex="0">
     						<a class="catalog-link" href="catalog.html">Каталог</a>
@@ -44,7 +44,7 @@
     				<ul class="side-navigation-list">
     					<!-- Поиск -->
               <li class="search">
-              	<button type="button" aria-label="Кнопка поиска" class="search-icon-button">
+                <button type="button" aria-label="Кнопка поиска" class="search-icon-button">
                   <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
                      height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
                     <path class="nav-icon" d="M16.958,15.527L11.75,10.32C12.533,9.247,13,7.93,13,6.5C13,2.91,10.09,0,6.5,0S0,2.91,0,6.5
@@ -53,10 +53,10 @@
                   </svg>
                 </button>
                 <div class="search-form-wrapper">
-              		<form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                  <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                     <label class="visually-hidden" for="search-text-field">Поиск</label>
-              			<input type="text" id="search-text-field" name="search-text" placeholder="Что ищем?">
-              		</form>
+                    <input type="text" id="search-text-field" name="search-text" placeholder="Что ищем?">
+                  </form>
                 </div>
               </li>
     					<!-- Форма логина -->
@@ -121,19 +121,19 @@
         <div class="container">
           <section class="slider">
             <h2 class="visually-hidden">Слайдер главной страницы</h2>
-            <div class="slide-1">
+            <div class="slide slide-1">
               <h3 class="visually-hidden">Первый слайд</h3>
               <img src="img/main-slider/icecream-slide-1.png" alt="Фотография мороженки">
               <b class="slide-description">Крем-брюле и пломбир с малиновым джемом</b>
               <a href="#" class="button">Давайте оба!</a>
             </div>
-            <div class="slide-2">
+            <div class="slide slide-2">
               <h3 class="visually-hidden">Второй слайд</h3>
               <img src="img/main-slider/icecream-slide-2.png" alt="Фотография мороженки">
               <b class="slide-description">Шоколадный пломбир и лимонный сорбет</b>
               <a href="#" class="button">Давайте оба!</a>
             </div>
-            <div class="slide-3">
+            <div class="slide slide-3">
               <h3 class="visually-hidden">Третий слайд</h3>
               <img src="img/main-slider/icecream-slide-3.png" alt="Фотография мороженки">
               <b class="slide-description">Пломбир с помадкой и клубничный щербет</b>
@@ -142,19 +142,21 @@
           </section>
   			</div>
         <!-- Блок с промо-ниформацией -->
-        <div class="container">
-    			<section class="banner free-raspberries">
-    				<h2 class="section-title">Малинка даром</h2>
-    				<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-    				<a href="#" class="button">Хочу варенье!</a>
-    			</section>
+        <section class="promo-info">
+          <div class="container">
+      			<section class="banner free-raspberries">
+      				<h2 class="section-title">Малинка даром</h2>
+      				<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+      				<a href="#" class="button">Хочу варенье!</a>
+      			</section>
 
-    			<section class="banner free-chocolate">
-    				<h2 class="section-title">Шоколадки даром</h2>
-    				<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-    				<a href="#" class="button">Хочу шоколадки!</a>
-    			</section>
-        </div>
+      			<section class="banner free-chocolate">
+      				<h2 class="section-title">Шоколадки даром</h2>
+      				<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+      				<a href="#" class="button">Хочу шоколадки!</a>
+      			</section>
+          </div>
+        </section>
   			<!-- Блок популярных товаров -->
         <div class="container">
     			<section class="popular-items">

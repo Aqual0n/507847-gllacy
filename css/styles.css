@@ -259,8 +259,23 @@ a.main-nav-current {
 
 /*Стилизация пользовательской навигации*/
 .side-navigation-list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  justify-content: space-between;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  width: 267px;
   margin: 0;
+  margin-left: auto;
   padding: 0;
+  padding-left: 6px;
   list-style: none;
 }
 
@@ -532,6 +547,7 @@ a.main-nav-current {
 /*Номер телефона*/
 
 .phone-number {
+  margin-left: auto;
   text-align: right;
   font-size: 14px;
   line-height: 16px;
@@ -581,7 +597,43 @@ a.main-nav-current {
 
 /*Сетка всего хедера*/
 
+.header-logo {
+  margin-right: 11px;
+}
+
+.main-navigation {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  align-items: center;
+  width: 100%;
+
+  z-index: 2;
+  min-height: 75px;
+}
+
+.page-header .container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 /*Слайдер*/
+
+/*input[name="slide-dot"] {
+  display: none;
+}*/
 
 .slider .button {
   width: 278px;
@@ -589,15 +641,90 @@ a.main-nav-current {
 
   font-size: 32px;
   line-height: 44px;
+  z-index: 1;
 }
 
 .slide-description {
   font-size: 60px;
   line-height: 60.35px;
   font-weight: bold;
+  z-index: 1;
+
+  max-width: 685px;
+  margin-bottom: 34px;
 }
 
-/*Переключатель фона*/
+  /*Сетка слайдера*/
+
+.slider {
+  position: relative;
+  min-height: 525px;
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+
+  -ms-align-items: center;
+  align-items: center;
+
+  justify-content: flex-end;
+}
+
+.slide-wrapper {
+  margin-top: auto;
+
+}
+
+.slide img {
+  position: absolute;
+  top: -389px;
+  z-index: 0;
+}
+
+.slide {
+  transition: opacity .5s;
+
+  opacity: 0;
+
+  padding-bottom: 79px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  position: absolute;
+
+  text-align: center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+}
+
+
+/*Переключатель слайдов фона*/
+
+.slide-toggle-1:checked ~ .wrapper .slide-1,
+.slide-toggle-2:checked ~ .wrapper .slide-2,
+.slide-toggle-3:checked ~ .wrapper .slide-3 {
+  transition: opacity .5s;
+  opacity: 1;
+}
+
+
 .slide-toggle-1:checked ~ .wrapper {
   transition: background-color .3s;
   background-color: #849d8f;
@@ -613,7 +740,12 @@ a.main-nav-current {
   background-color: #9d8b84;
 }
 
+
 /*Блок с промо-информацией*/
+
+.banner {
+  width: 48.86561954%;
+}
 
 .banner p {
   font-weight: bold;
@@ -646,6 +778,18 @@ a.main-nav-current {
   background-image: url(../img/backgrounds/chocolate-bg.jpg);
   background-repeat: no-repeat;
   background-position: top center;
+}
+
+/*Сетка блока с промо-информацией*/
+
+.promo-info .container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  justify-content: space-between;
 }
 
 /*Популярные товары*/
