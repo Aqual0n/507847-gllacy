@@ -690,7 +690,7 @@ a.main-nav-current {
 }
 
 .slide {
-  transition: opacity .5s;
+  transition: opacity .7s;
 
   opacity: 0;
 
@@ -720,23 +720,23 @@ a.main-nav-current {
 .slide-toggle-1:checked ~ .wrapper .slide-1,
 .slide-toggle-2:checked ~ .wrapper .slide-2,
 .slide-toggle-3:checked ~ .wrapper .slide-3 {
-  transition: opacity .5s;
+  transition: opacity .7s;
   opacity: 1;
 }
 
 
 .slide-toggle-1:checked ~ .wrapper {
-  transition: background-color .3s;
+  transition: background-color .7s;
   background-color: #849d8f;
 }
 
 .slide-toggle-2:checked ~ .wrapper {
-  transition: background-color .3s;
+  transition: background-color .7s;
   background-color: #8996a6;
 }
 
 .slide-toggle-3:checked ~ .wrapper {
-  transition: background-color .3s;
+  transition: background-color .7s;
   background-color: #9d8b84;
 }
 
@@ -917,12 +917,27 @@ a.main-nav-current {
   background-color: #eaddbf;
   background-image: url(../img/backgrounds/wafer-bg.jpg);
   color: #323232;
+
+  padding-top: 25px;
+  padding-bottom: 10px;
+  padding-left: 21px;
+  padding-right: 33px;
+
+  margin-bottom: 40px;
+
+  border-radius: 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .shop-description {
   font-weight: 200;
   font-size: 24px;
   line-height: 30px;
+
+  display: block;
+  margin-bottom: 15px;
 }
 
 .features-list {
@@ -937,12 +952,30 @@ a.main-nav-current {
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
 
+  justify-content: space-between;
+
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.features-list li {
+  width: 48.8656195461%;
+}
+
+.feature-item p {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  margin-top: 7px;
+  margin-bottom: 15px;
+}
+
 .feature-item p::before {
+  margin-top: -17px;
   margin-right: 8px;
   display: inline-block;
   vertical-align: middle;
@@ -966,13 +999,37 @@ a.main-nav-current {
 
 /*Блог*/
 
+.article-dispath-wrapper {
+  margin-bottom: 40px;
+}
+
+.article-dispath-wrapper .container {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  justify-content: space-between;
+}
+
 .serving-ways-article {
+  padding-top: 25px;
+  padding-left: 20px;
+
+  width: 48.86561954%;
+  border-radius: 15px;
+
   background-color: #fff;
   background-image: url(../img/backgrounds/strawberry-bg.jpg);
   background-position: center center;
 
   min-height: 220px;
   color: #323232;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .blog-title {
@@ -982,19 +1039,34 @@ a.main-nav-current {
 }
 
 .article-title {
+  display: block;
+
   font-size: 24px;
   line-height: 30px;
   text-decoration: underline;
   font-weight: bold;
   color: #323232;
+
+  max-width: 280px;
 }
 
 /*Рассылка*/
 
 .dispath {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 21px;
+
+  width: 48.86561954%;
+  border-radius: 15px;
+
   min-height: 220px;
   background-color: #f8f7f4;
   color: #5a5a5a;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /*P. S: Рамку буду делать градиентами потом*/
@@ -1060,8 +1132,6 @@ p.phone-order {
 .map {
   margin: 0 auto;
   position: relative;
-
-  max-width: 1200px;
   min-height: 430px;
 
   background-image: url(../img/backgrounds/map-fallback-bg.jpg);
@@ -1069,6 +1139,27 @@ p.phone-order {
 }
 
 /*Футер*/
+
+  /*Сетка*/
+
+.page-footer {
+  height: 100px;
+}
+
+.page-footer .container {
+  height: 100%;
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  -ms-align-items: center;
+  align-items: center;
+
+  justify-content: space-between;
+}
 
 /*Социконки*/
 
@@ -1098,11 +1189,27 @@ p.phone-order {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  width: 310px;
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .for-providers-list a{
   font-size: 13px;
   line-height: 18px;
+  margin-right: auto;
+
 
   text-decoration: underline;
 }
@@ -1112,6 +1219,8 @@ p.phone-order {
 }
 
 .for-providers-link::before {
+  margin-left: -22px;
+
   content: url(../img/icons/heart-icon.svg);
   display: inline-block;
   vertical-align: middle;
