@@ -745,11 +745,12 @@ a.main-nav-current {
 
 .promo-info {
   margin-top: -38px;
+  margin-bottom: 40px;
 }
 
 .banner {
   width: 48.86561954%;
-  border-radius: 25px;
+  border-radius: 15px;
 
   display: -webkit-flex;
   display: -moz-flex;
@@ -791,7 +792,6 @@ a.main-nav-current {
 
   margin-bottom: 23px;
   margin-left: auto;
-
 }
 
 .section-title {
@@ -830,6 +830,10 @@ a.main-nav-current {
 
 /*Популярные товары*/
 
+.popular-items {
+  margin-bottom: 40px;
+}
+
 .popular-items-list {
   margin: 0;
   padding: 0;
@@ -842,6 +846,12 @@ a.main-nav-current {
   justify-content: space-between;
 }
 
+.popular-items-list li {
+  width: 23.298429319371%;
+}
+
+
+
 .item-wrapper {
   position: relative;
   display: -webkit-flex;
@@ -849,11 +859,13 @@ a.main-nav-current {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
+
   justify-content: center;
 }
 
