@@ -14,9 +14,9 @@
 	<body>
     <!-- Переключатель слайдера (будет доработан) -->
     <!-- Лишние классы добавлены исключительно для критерия Д6 -->
-    <input type="radio" name="slide-dot" class="slide-toggle-1" id="toggle-slide-1" checked>
-    <input type="radio" name="slide-dot" class="slide-toggle-2" id="toggle-slide-2">
-    <input type="radio" name="slide-dot" class="slide-toggle-3" id="toggle-slide-3">
+    <input type="radio" name="slide-dot" class="visually-hidden slide-toggle-1" id="toggle-slide-1" checked>
+    <input type="radio" name="slide-dot" class="visually-hidden slide-toggle-2" id="toggle-slide-2">
+    <input type="radio" name="slide-dot" class="visually-hidden slide-toggle-3" id="toggle-slide-3">
     <!-- Обёртка для изменения цвета страницы-->
     <div class="wrapper">
 		  <!-- Начало шапки сайта -->
@@ -120,22 +120,34 @@
         <!-- Слайдер -->
         <div class="container">
           <section class="slider">
+            <ul class="slider-dots">
+              <li>
+                <label for="toggle-slide-1" class="slider-dot"></label>
+              </li>
+
+              <li>
+                <label for="toggle-slide-2" class="slider-dot"></label>
+              </li>
+
+              <li>
+                <label for="toggle-slide-3" class="slider-dot"></label>
+              </li>
+
+            </ul>
+
             <h2 class="visually-hidden">Слайдер главной страницы</h2>
             <div class="slide slide-1">
               <h3 class="visually-hidden">Первый слайд</h3>
-              <img src="img/main-slider/icecream-slide-1.png" alt="Фотография мороженки">
               <b class="slide-description">Крем-брюле и пломбир с малиновым джемом</b>
               <a href="#" class="button">Давайте оба!</a>
             </div>
             <div class="slide slide-2">
               <h3 class="visually-hidden">Второй слайд</h3>
-              <img src="img/main-slider/icecream-slide-2.png" alt="Фотография мороженки">
               <b class="slide-description">Шоколадный пломбир и лимонный сорбет</b>
               <a href="#" class="button">Давайте оба!</a>
             </div>
             <div class="slide slide-3">
               <h3 class="visually-hidden">Третий слайд</h3>
-              <img src="img/main-slider/icecream-slide-3.png" alt="Фотография мороженки">
               <b class="slide-description">Пломбир с помадкой и клубничный щербет</b>
               <a href="#" class="button">Давайте оба!</a>
             </div>
