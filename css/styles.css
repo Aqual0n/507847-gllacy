@@ -315,8 +315,23 @@ a.main-nav-current {
   padding-left: 16px;
 }
 
+.login:hover > a,
+.cart-empty:hover > a,
+.cart:hover > a,
+.login:focus > a,
+.cart-empty:focus > a,
+.cart:focus > a {
+  background-color: #fff;
+  color: #000;
+}
+
 .login > a {
   min-width: 92px;
+}
+
+.cart > a {
+  background-color: #fff;
+  color: #000;
 }
 
 .cart-empty > a,
@@ -351,7 +366,11 @@ a.main-nav-current {
 }
 /*Ховерофокус для иконок в пользовательской навигации*/
 .search:hover .nav-icon,
-.search:focus .nav-icon {
+.search:focus .nav-icon,
+.cart-empty:hover .nav-icon,
+.login:hover .nav-icon,
+.cart-empty:focus .nav-icon
+.login:focus .nav-icon{
   fill: #000000;
 }
 
@@ -490,6 +509,12 @@ a.main-nav-current {
 /*Корзина*/
 
 .cart-wrapper {
+  position: absolute;
+  bottom: -242px;
+  left: -422px;
+
+  display: none;
+
   width: 540px;
   min-height: 242px;
 
@@ -498,6 +523,12 @@ a.main-nav-current {
   background-color: rgb(248, 247, 244);
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
 }
+
+.cart:hover .cart-wrapper,
+.cart:focus .cart-wrapper {
+  display: block;
+}
+
 
 .cart .cart-link::before {
   content: url(../img/icons/cart-icon.svg);
@@ -546,13 +577,7 @@ a.main-nav-current {
 
 /*Номер телефона*/
 
-.phone-number {
-  margin-left: auto;
-  text-align: right;
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: bold;
-}
+
 
 .number-itself {
   font-size: 22px;
@@ -563,6 +588,7 @@ a.main-nav-current {
 
 .breadcrumbs {
   margin: 0;
+  margin-top: 15px;
   padding: 0;
   list-style: none;
   display: -webkit-flex;
@@ -1067,6 +1093,63 @@ a.main-nav-current {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+
+  position: relative;
+}
+/*Рамка*/
+
+.dispath::after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  bottom: -5px;
+  left: -5px;
+  right: -5px;
+  background-image: repeating-linear-gradient(135deg,
+    red 0px,
+    red 5px,
+    white 5px,
+    white 10px,
+    blue 10px,
+    blue 15px,
+    white 15px,
+    white 20px);
+  z-index: -1;
+  border-radius: 15px;
+}
+
+.dispath p {
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.dispath-form {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.dispath-form input[name="dispath-email"] {
+  padding-left: 14px;
+
+  width: 366px;
+  height: 42px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  border-radius: 6px;
+
+  border: 1px solid #d3d3d2;
+}
+
+.dispath-form .button {
+  min-width: 128px;
 }
 
 /*P. S: Рамку буду делать градиентами потом*/
@@ -1112,9 +1195,13 @@ p.adress {
 }
 
 .phone-number {
+  margin-top: -6px;
+  margin-left: auto;
+  text-align: right;
+  font-size: 14px;
+  line-height: 16px;
   font-weight: bold;
-  font-size: 18px;
-  line-height: 22px;
+
 }
 
 p.phone-order {
@@ -1174,6 +1261,10 @@ p.phone-order {
   display: flex;
 }
 
+.social-list li {
+  height: 38px;
+}
+
 .social-list a {
   margin-right: 11px;
 }
@@ -1185,7 +1276,7 @@ p.phone-order {
 
 /*Для поставщиков*/
 
-.for-providers-list {s
+.for-providers-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1203,6 +1294,8 @@ p.phone-order {
   -ms-flex-wrap: wrap;
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
+
+  justify-content: space-between;
 }
 
 .for-providers-list a{
@@ -1250,6 +1343,25 @@ p.phone-order {
 
 /*Форма сортировки в каталоге*/
 
+.filters {
+  margin-bottom: 40px;
+}
+
+.sorting-form {
+  width: 857px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .sorting-form > label,
 .sorting-form legend {
   font-weight: 200;
@@ -1260,6 +1372,35 @@ p.phone-order {
 .sort-field label {
   font-weight: 200;
   line-height: 18px;
+}
+
+.fieldset-wrapper {
+  height: 36px;
+}
+
+.selection {
+/*  -webkit-appearance: none;*/
+  width: 193px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, .2);
+  color: #fff;
+
+  padding-left: 16px;
+
+  border-radius: 25px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.selection::after {
+  content: url(../img/icons/icon-down-dir.svg);
+  display: block;
+
+}
+
+.selection option {
+  color: #000;
 }
 
 .sort-field {

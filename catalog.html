@@ -10,11 +10,11 @@
     <!-- Начало шапки сайта -->
     <header class="page-header">
       <div class="container">
-        <a href="index.html">
-        <img src="img/header-logo.svg" alt="Логотип магазина «Глейси»" class="header-logo" width="154" height="63">
-        </a>
         <!-- Основная навигация -->
         <nav class="main-navigation">
+          <a href="index.html">
+            <img src="img/header-logo.svg" alt="Логотип магазина «Глейси»" class="header-logo" width="154" height="63">
+          </a>
           <ul class="main-navigation-list">
             <li class="topper topper-catalog">
               <a class="main-nav-current" href="catalog.html">Каталог</a>
@@ -135,16 +135,18 @@
           <!-- Форма фильтров -->
           <form class="sorting-form" action="https://echo.htmlacademy.ru" method="get">
             <!-- Сортировка -->
-            <label for="sort">Сортировка</label>
-            <select name="sort" id="sort">
-              <option value="by-popularity">По популярности</option>
-              <option value="cheap-first">Сначала недорогие</option>
-              <option value="expensive-first">Сначала дорогие</option>
-              <option value="by-fat-content">По жирности</option>
-            </select>
+            <label>Сортировка<br>
+              <select class="selection" name="sort">
+                <option value="by-popularity">По популярности</option>
+                <option value="cheap-first">Сначала недорогие</option>
+                <option value="expensive-first">Сначала дорогие</option>
+                <option value="by-fat-content">По жирности</option>
+              </select>
+            </label>
             <!-- Бегунок по цене -->
-            <label for="price-range">Цена: 100 руб. – 500 руб.</label>
-            <input id="price-range" name="price-range" type="range" min="100" max="500">
+            <label>Цена: 100 руб. – 500 руб.<br>
+              <input name="price-range" type="range" min="100" max="500">
+             </label>
             <!-- Выбор жирности -->
             <fieldset class="sort-field fat">
               <legend>Жирность</legend>
@@ -280,8 +282,8 @@
             <li class="pagination-item"><a href="#">5</a></li>
             <li><a href="#">&gt;</a></li>
           </ul>
-        </section>
-      </div>
+          </div>
+      </section>
     </main>
     <!-- Конец основной чсти контента -->
     <!-- Начало подвала -->
