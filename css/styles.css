@@ -621,6 +621,7 @@ a.main-nav-current {
   line-height: 41px;
   font-weight: bold;
   margin-top: 0;
+  margin-bottom: 30px;
 }
 
 /*Сетка всего хедера*/
@@ -859,7 +860,7 @@ a.main-nav-current {
 /*Популярные товары*/
 
 .popular-items {
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 }
 
 .popular-items-list {
@@ -872,6 +873,11 @@ a.main-nav-current {
   display: -o-flex;
   display: flex;
   justify-content: space-between;
+}
+
+.popular-items-list.items-list li,
+.popular-items-list.items-list{
+  margin-bottom: 0;
 }
 
 .popular-items-list li,
@@ -1069,6 +1075,7 @@ a.main-nav-current {
   font-weight: 200;
   font-size: 16px;
   line-height: 22px;
+  margin: 0;
 }
 
 .article-title {
@@ -1086,9 +1093,9 @@ a.main-nav-current {
 /*Рассылка*/
 
 .dispath {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 21px;
+  padding-top: 35px;
+  padding-left: 25px;
+  padding-right: 26px;
 
   width: 48.86561954%;
   border-radius: 15px;
@@ -1245,6 +1252,8 @@ p.phone-order {
 .page-footer .container {
   height: 100%;
 
+  border-top: 1px solid rgba(255, 255, 255, .3);
+
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -1353,6 +1362,7 @@ p.phone-order {
 /*Форма сортировки в каталоге*/
 
 .filters {
+  min-height: 130px; /*Временно для сетки*/
   margin-bottom: 40px;
 }
 
@@ -1421,20 +1431,30 @@ p.phone-order {
 
 /*Каталог*/
 
+.items .container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .items-list {
   margin: 0;
+  margin-bottom: 48px;
   padding: 0;
+
   list-style: none;
+
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+
   -webkit-flex-wrap: wrap;
   -moz-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
+
   justify-content: space-between;
 }
 
@@ -1444,12 +1464,10 @@ p.phone-order {
   overflow: hidden;
 }
 
-.items-list li:hover .item-wrapper::before,
 .items-list li:hover .item-wrapper::before {
   display: block;
 }
 
-.items-list li:hover .item-wrapper,
 .items-list li:hover .item-wrapper{
   overflow: visible;
 }
@@ -1497,8 +1515,12 @@ p.phone-order {
 /*Пагинация*/
 
 .pagination {
-  margin: 0;
+  margin: 0 -8px 30px auto;
+/*  margin-left: auto;
+  margin-right: -8px;
+  margin-bottom: 30px;*/
   padding: 0;
+
   list-style: none;
   display: -webkit-flex;
   display: -moz-flex;
@@ -1507,10 +1529,20 @@ p.phone-order {
   display: flex;
 }
 
+.pagination-item,
+.pagination-prev {
+  margin-right: 5px;
+}
+
+.crazy-thing {
+  transform: scaleX(-1);
+}
+
 .pagination a,
 .pagination-arrow-deadend {
   width: 25px;
   height: 25px;
+
   display: -webkit-inline-flex;
   display: -moz-inline-flex;
   display: -ms-inline-flex;
@@ -1527,6 +1559,7 @@ p.phone-order {
 
 .pagination-arrow-deadend {
   cursor: default;
+  opacity: .2;
 }
 
 .pagination a:hover,
