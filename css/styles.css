@@ -581,6 +581,12 @@ a.main-nav-current {
   width: 540px;
   min-height: 242px;
 
+  padding: 20px 15px;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
   color: #323232;
   border-radius: 5px;
   background-color: rgb(248, 247, 244);
@@ -590,9 +596,18 @@ a.main-nav-current {
 
 .cart:hover .cart-wrapper,
 .cart:focus .cart-wrapper {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
+.cart-underline {
+  width: 100%;
+
+  margin-top: 4px;
+  margin-bottom: 12px;
+
+  background-color: #cacac7;
+}
 
 .cart .cart-link::before {
   content: '';
@@ -606,9 +621,39 @@ a.main-nav-current {
   margin-right: 7px;
 }
 
+.cart-item-wrapper {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.subtable-wrapper {
+  margin-left: auto;
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -o-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
 .cart-item-description {
   font-size: 13px;
   line-height: 16px;
+
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+
+.cart-item-description tr:not(:last-child) {
+
 }
 
 .delete-item-button {
@@ -620,6 +665,8 @@ a.main-nav-current {
   background-color: transparent;
   height: 11px;
   width: 11px;
+
+  margin-right: 9px;
 }
 
 .cart-item-price {
@@ -630,12 +677,37 @@ a.main-nav-current {
   font-size: 15px;
   line-height: 18px;
   font-weight: bold;
+
+  margin-left: auto;
+  margin-right: -2px;
+  margin-bottom: 17px;
 }
 
 .cart-wrapper .button {
   width: 170px;
   height: 44px;
+
+  margin-left: auto;
+  font-size: 18px;
+  line-height: 24px;
 }
+
+.table-image{
+  border-radius: 50%;
+  margin-right: 13px;
+}
+
+.table-item-name {
+  max-width: 217px;
+  margin-right: 31px;
+}
+
+.table-item-weight {
+  padding: 0;
+  margin: 0;
+  margin-right: 29px;
+}
+
 
 /*Ссылки в форме*/
 
