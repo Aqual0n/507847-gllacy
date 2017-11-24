@@ -53,7 +53,9 @@ input[type="radio"].visually-hidden {
 
   white-space: nowrap;
 
-  clip-path: inset(100%);
+  -webkit-clip-path: inset(100%);
+
+          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -80,10 +82,11 @@ a {
 }
 
 .button {
-  display: -webkit-inline-flex;
   display: -moz-inline-flex;
   display: -ms-inline-flex;
   display: -o-inline-flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   -ms-align-items: center;
   -webkit-box-align: center;
@@ -766,14 +769,18 @@ a.main-nav-current {
   padding: 0;
 
   width: 80px;
-
-  display: -webkit-inline-flex;
   display: -moz-inline-flex;
   display: -ms-inline-flex;
   display: -o-inline-flex;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
 
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+
+      -ms-flex-pack: justify;
+
+          justify-content: space-between;
 }
 
 .slider-dot {
@@ -828,6 +835,8 @@ a.main-nav-current {
 
 
 .slide-toggle-1:checked ~ .wrapper {
+  -webkit-transition: background-color .7s, background-image .3s ease-in-out;
+  -o-transition: background-color .7s, background-image .3s ease-in-out;
   transition: background-color .7s, background-image .3s ease-in-out;
   background-image: url(../img/main-slider/icecream-slide-1.png);
   background-repeat: no-repeat;
@@ -836,6 +845,8 @@ a.main-nav-current {
 }
 
 .slide-toggle-2:checked ~ .wrapper {
+  -webkit-transition: background-color .7s, background-image .3s ease-in-out;
+  -o-transition: background-color .7s, background-image .3s ease-in-out;
   transition: background-color .7s, background-image .3s ease-in-out;
   background-image: url(../img/main-slider/icecream-slide-2.png);
   background-repeat: no-repeat;
@@ -844,6 +855,8 @@ a.main-nav-current {
 }
 
 .slide-toggle-3:checked ~ .wrapper {
+  -webkit-transition: background-color .7s, background-image .3s ease-in-out;
+  -o-transition: background-color .7s, background-image .3s ease-in-out;
   transition: background-color .7s, background-image .3s ease-in-out;
   background-image: url(../img/main-slider/icecream-slide-3.png);
   background-repeat: no-repeat;
@@ -1626,7 +1639,9 @@ p.phone-order {
 
   top: -9px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 
   z-index: 1;
 
@@ -1643,7 +1658,9 @@ p.phone-order {
   position: absolute;
   bottom: -59px;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 
   z-index: 2;
 }
