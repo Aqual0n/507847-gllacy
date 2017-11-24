@@ -77,6 +77,20 @@ a {
   color: #fff;
 }
 
+a:not(.button):hover,
+a:not(.button):focus,
+.breadcrumbs a.crumb:hover,
+.breadcrumbs a.crumb:focus {
+  color: #e84d37;
+}
+
+.pagination-item a:hover,
+.pagination-item a:focus{
+  color: #fff;
+}
+
+
+
 .item-wrapper img{
   border-radius: 50%;
 }
@@ -253,13 +267,17 @@ a.main-nav-current {
   height: 38px;
 }
 
-.drop-down-list a {
+ul.drop-down-list a {
   padding-left: 13px;
   display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 128px;
 
+  color: #000;
+}
+
+ul.drop-down-list a:hover {
   color: #000;
 }
 
@@ -1597,27 +1615,99 @@ p.phone-order {
 
 .sorting-form {
   width: 857px;
+
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+
   -ms-flex-wrap: wrap;
   -o-flex-wrap: wrap;
   flex-wrap: wrap;
+
+  justify-content: space-between;
+
+  -ms-align-items: flex-end;
+  align-items: flex-end;
 }
 
-.sorting-form > label,
-.sorting-form legend {
+.sort-stuffing-wrapper {
+  margin-top: 9px;
+}
+
+.selection-drop-wrapper > label,
+.radio-wrapper label,
+.sorting-form h3 {
   font-weight: 200;
   font-size: 14px;
   line-height: 16px;
+  margin: 0;
+  margin-bottom: 9px;
+  display: inline-block;
+  margin-left: 16px;
 }
 
 .sort-field label {
   font-weight: 200;
   line-height: 18px;
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  -ms-align-items: center;
+  align-items: center;
+
+  margin-right: 20px;
+}
+
+.sort-field label:last-child {
+  margin-right: 0;
+}
+
+.check-box,
+.radio-box {
+  display: block;
+
+  opacity: .8;
+
+  margin-right: 9px;
+}
+
+.check-box {
+  width: 24px;
+  height: 20px;
+
+  transition: background-image .3s linear;
+  background-image: url(../img/icons/checkbox-off.svg);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.radio-box {
+  width: 22px;
+  height: 22px;
+
+  transition: background-image .2s ease;
+  background-image: url(../img/icons/radio-off.svg);
+  background-position: center center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+.sort-field.fat input:checked + .radio-box {
+  transition: background-image .3s ease;
+  background-image: url(../img/icons/radio-on.svg);
+}
+
+.sort-field.stuffing input:checked + .check-box {
+  transition: background-image .2s linear;
+  background-image: url(../img/icons/checkbox-on.svg);
 }
 
 .fieldset-wrapper {
@@ -1626,9 +1716,12 @@ p.phone-order {
 
 .selection {
 /*  -webkit-appearance: none;*/
+  border: none;
   width: 193px;
   height: 36px;
   background-color: rgba(255, 255, 255, .2);
+
+  font-size: 16px;
   color: #fff;
 
   padding-left: 16px;
@@ -1650,10 +1743,52 @@ p.phone-order {
 
 .sort-field {
   border: none;
-  padding: 0;
+
+  padding: 0px 16px;
+
   background-color: rgba(255, 255, 255, .2);
   border-radius: 30px;
+
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+
+  height: 36px;
+
+  -ms-align-items: center;
+  align-items: center;
 }
+
+.filter-submit {
+  transition: color .3s, background-color .3s;
+
+  height: 36px;
+  padding: 0 28px;
+
+  color: #fff;
+  background-color: rgba(255, 255, 255, .2);
+
+  border: 2px solid #fff;
+
+  border-radius: 25px;
+}
+
+.filter-submit:hover,
+.filter-submit:focus {
+  outline: none;
+  transition: color .3s, background-color .3s;
+
+  background-color: #fff;
+  color: #000;
+}
+
+.filter-submit:active {
+  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.4);
+}
+
+
 
 /*Каталог*/
 
@@ -1762,9 +1897,6 @@ p.phone-order {
 
 .pagination {
   margin: 0 -8px 30px auto;
-/*  margin-left: auto;
-  margin-right: -8px;
-  margin-bottom: 30px;*/
   padding: 0;
 
   list-style: none;

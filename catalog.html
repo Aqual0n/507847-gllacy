@@ -118,8 +118,8 @@
         </nav>
         <!-- Навигация по сайту -->
         <ul class="breadcrumbs" aria-label="Навигация по сайту">
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="#">Каталог</a></li>
+          <li><a class="crumb" href="index.html">Главная</a></li>
+          <li><a class="crumb" href="#">Каталог</a></li>
           <li class="breadcrumps-current"><span>Сливочное</span></li>
         </ul>
         <!-- Номер телефона -->
@@ -141,35 +141,81 @@
           <!-- Форма фильтров -->
           <form class="sorting-form" action="https://echo.htmlacademy.ru" method="get">
             <!-- Сортировка -->
-            <label>Сортировка<br>
-              <select class="selection" name="sort">
+            <div class="selection-drop-wrapper">
+              <label for="selection-drop">Сортировка</label><br>
+              <select id="selection-drop" class="selection" name="sort">
                 <option value="by-popularity">По популярности</option>
                 <option value="cheap-first">Сначала недорогие</option>
                 <option value="expensive-first">Сначала дорогие</option>
                 <option value="by-fat-content">По жирности</option>
               </select>
-            </label>
+            </div>
             <!-- Бегунок по цене -->
-            <label>Цена: 100 руб. – 500 руб.<br>
-              <input name="price-range" type="range" min="100" max="500">
-             </label>
+            <div class="radio-wrapper">
+              <label for="tempradio">Цена: 100 руб. – 500 руб.</label><br>
+              <input name="price-range" id="tempradio" type="range" min="100" max="500">
+            </div>
             <!-- Выбор жирности -->
-            <fieldset class="sort-field fat">
-              <legend>Жирность</legend>
-              <label><input type="radio" name="fat-content" value="0">0%</label>
-              <label><input type="radio" name="fat-content" value="10" checked>до 10%</label>
-              <label><input type="radio" name="fat-content" value="30">до 30%</label>
-              <label><input type="radio" name="fat-content" value="30+">выше 30%</label>
-            </fieldset>
-            <!-- Выбор наполнителей -->
-            <fieldset class="sort-field stuffing">
-              <legend>Наполнители</legend>
-              <label><input type="checkbox" name="chocolate" checked>шоколадные</label>
-              <label><input type="checkbox" name="sugar" checked>cахарные присыпки</label>
-              <label><input type="checkbox" name="fruits">фрукты</label>
-              <label><input type="checkbox" name="syrups">cиропы</label>
-              <label><input type="checkbox" name="jams">джемы</label>
-            </fieldset>
+            <div class="sort-fat-wrapper">
+              <h3>Жирность</h3>
+
+              <div class="sort-field fat">
+                <label>
+                  <input class="visually-hidden" type="radio" name="fat-content" value="0">
+                  <span class="radio-box"></span>
+                  <span>0%</span>
+                </label>
+                <label>
+                  <input class="visually-hidden" type="radio" name="fat-content" value="10" checked>
+                  <span class="radio-box"></span>
+                  <span>до 10%</span>
+                </label>
+                <label>
+                  <input class="visually-hidden" type="radio" name="fat-content" value="30">
+                  <span class="radio-box"></span>
+                  <span>до 30%</span>
+                </label>
+                <label>
+                  <input class="visually-hidden" type="radio" name="fat-content" value="30+">
+                  <span class="radio-box"></span>
+                  <span>выше 30%</span>
+                </label>
+              </div>
+
+            </div>
+              <!-- Выбор наполнителей -->
+            <div class="sort-stuffing-wrapper">
+              <h3>Наполнители</h3>
+
+              <div class="sort-field stuffing">
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="chocolate" checked>
+                  <span class="check-box"></span>
+                  <span>шоколадные</span>
+                </label>
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="sugar" checked>
+                  <span class="check-box"></span>
+                  <span>cахарные присыпки</span>
+                </label>
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="fruits">
+                  <span class="check-box"></span>
+                  <span>фрукты</span>
+                </label>
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="syrups">
+                  <span class="check-box"></span>
+                  <span>cиропы</span>
+                </label>
+                <label>
+                  <input class="visually-hidden" type="checkbox" name="jams">
+                  <span class="check-box"></span>
+                  <span>джемы</span>
+                </label>
+              </div>
+            </div>
+
             <!-- Кнопка отправки формы -->
             <input type="submit" value="Применить" aria-label="Кнопка отправки формы" class="filter-submit">
           </form>
