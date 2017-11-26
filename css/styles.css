@@ -93,6 +93,7 @@ a:not(.button):focus,
 
 .item-wrapper img{
   border-radius: 50%;
+  width: 100%;
 }
 
 .button {
@@ -1113,7 +1114,7 @@ ul.drop-down-list a:hover {
 
   position: absolute;
   left: 0;
-  top: 160px;
+  bottom: 9%;
 
   font-weight: bold;
   font-size: 45px;
@@ -1772,6 +1773,7 @@ p.phone-order {
 
   border: 2px solid #fff;
 
+  cursor: pointer;
   border-radius: 25px;
 }
 
@@ -1785,6 +1787,11 @@ p.phone-order {
 }
 
 .filter-submit:active {
+  transition: box-shadow .1s;
+
+  border:none;
+  padding: 0 30px;
+
   box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.4);
 }
 
