@@ -765,7 +765,7 @@ ul.drop-down-list a:hover {
 .breadcrumbs li:not(:last-child)::after {
   content: '»';
   margin-left: 8px;
-  margin-right: 8px;
+  margin-right: 5px;
 }
 
 .breadcrumps-current span{
@@ -778,7 +778,7 @@ ul.drop-down-list a:hover {
   line-height: 41px;
   font-weight: bold;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 23px;
 }
 
 /*Сетка всего хедера*/
@@ -1677,7 +1677,7 @@ p.phone-order {
   -ms-align-items: center;
   align-items: center;
 
-  margin-right: 20px;
+  margin-right: 18px;
 }
 
 .sort-field label:last-child {
@@ -1730,7 +1730,7 @@ p.phone-order {
 }
 
 .selection {
-/*  -webkit-appearance: none;*/
+  -webkit-appearance: none;
   border: none;
   width: 193px;
   height: 36px;
@@ -1812,6 +1812,10 @@ p.phone-order {
 
 
 /*Каталог*/
+
+.page-header.catalog-header {
+    margin-bottom: 3px;
+}
 
 .items .container {
   display: -webkit-box;
