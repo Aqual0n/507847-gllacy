@@ -1,0 +1,6 @@
+<div style="
+    position: relative;
+"><img src="img/icecreams/icecream-6.jpg" alt=""><p class="price" style="
+    bottom: 17px;
+    margin: 0;
+">410<span class="weight">/Í„</span></p></div>

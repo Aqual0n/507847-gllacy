@@ -1146,7 +1146,10 @@ ul.drop-down-list a:hover {
   font-weight: 200;
   text-decoration: underline;
   text-align: center;
-  max-width: 255px;
+/*  max-width: 256px;*/
+
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 /*Преимущества*/
@@ -1689,24 +1692,26 @@ p.phone-order {
   display: block;
 
   opacity: .8;
-
-  margin-right: 9px;
 }
 
 .check-box {
-  width: 24px;
-  height: 20px;
+  width: 23px;
+  height: 22px;
 
   transition: background-image .3s linear;
   background-image: url(../img/icons/checkbox-off.svg);
   background-position: center center;
   background-size: contain;
   background-repeat: no-repeat;
+
+  margin-right: 12px;
 }
 
 .radio-box {
   width: 22px;
   height: 22px;
+
+  margin-right: 9px;
 
   transition: background-image .2s ease;
   background-image: url(../img/icons/radio-off.svg);
@@ -1738,6 +1743,12 @@ p.phone-order {
 
   font-size: 16px;
   color: #fff;
+
+  background-image: url(../img/icons/select-appearance.svg);
+
+  background-position: 168px center;
+
+  background-repeat: no-repeat;
 
   padding-left: 16px;
 
