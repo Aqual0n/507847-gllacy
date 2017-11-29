@@ -1505,6 +1505,10 @@ p.phone-order {
 .social-list {
   margin: 0;
   padding: 0;
+
+  margin-top: 6px;
+  margin-left: 2px;
+
   list-style: none;
   display: -moz-flex;
   display: -ms-flex;
@@ -1532,6 +1536,10 @@ p.phone-order {
 .for-providers-list {
   margin: 0;
   padding: 0;
+
+  margin-top: 3px;
+  margin-left: 2px;
+
   list-style: none;
 
   width: 310px;
@@ -1573,6 +1581,14 @@ p.phone-order {
   vertical-align: middle;
   margin-right: 7px;
 }
+
+.for-providers-list li:first-child {
+  margin-right: 31px;
+}
+
+.for-providers-list li:nth-child(2n-1) {
+  margin-right: 44px;
+}
 /*Копирайт*/
 
 .copyright-wrapper {
@@ -1592,6 +1608,8 @@ p.phone-order {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+
+  margin-bottom: 6px;
 }
 
 .copyright-text {
