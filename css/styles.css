@@ -1317,16 +1317,16 @@ span.feature-text {
   background-image:
     url(../img/backgrounds/dispath-bg.png),
     repeating-linear-gradient(135deg,
-      red 0px,
-      red 5px,
-      white 5px,
-      white 10px,
-      blue 10px,
-      blue 15px,
-      white 15px,
-      white 20px);
+      #fe9e90 0px,
+      #fe9e90 5px,
+      #fff 5px,
+      #fff 10px,
+      #92cdff 10px,
+      #92cdff 15px,
+      #fff 15px,
+      #fff 20px);
 
-  background-position: 5px 5px, top left;
+  background-position: 5px 4px, top left;
 
   background-repeat: no-repeat;
 
