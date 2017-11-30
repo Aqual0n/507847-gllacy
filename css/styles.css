@@ -94,6 +94,7 @@ a:not(.button):focus,
 .item-wrapper img{
   border-radius: 50%;
   width: 100%;
+  height: auto;
 }
 
 .button {
@@ -166,7 +167,9 @@ input.button {
 }
 
 .topper:hover > a,
-.topper:focus > a {
+.topper:focus > a,
+.topper > a:hover,
+.topper > a:focus {
   text-decoration: none;
   outline: none;
   background-color: #fff;
@@ -185,12 +188,10 @@ a.main-nav-current {
   text-decoration: none;
 }
 
-/*.topper > a:hover,
+.topper > a:hover,
 .topper > a:focus {
-  outline: none;
-  background-color: #fff;
   color: #000;
-}*/
+}
 
 .topper-catalog:hover .drop-down-list,
 .topper-catalog:focus .drop-down-list,
@@ -376,6 +377,23 @@ ul.drop-down-list a:hover {
   color: #000;
 }
 
+.login > a:hover,
+.cart-empty > a:hover,
+.cart > a:hover,
+.login > a:focus,
+.cart-empty > a:focus,
+.cart > a:focus {
+  background-color: #fff;
+  color: #000;
+}
+
+.login:focus > a,
+.cart-empty:focus > a,
+.cart:focus > a {
+  background-color: #fff;
+  color: #000;
+}
+
 .login > a {
   min-width: 92px;
 }
@@ -420,7 +438,7 @@ ul.drop-down-list a:hover {
 .search:focus .nav-icon,
 .cart-empty:hover .nav-icon,
 .login:hover .nav-icon,
-.cart-empty:focus .nav-icon
+.cart-empty:focus .nav-icon,
 .login:focus .nav-icon{
   fill: #000000;
 }
@@ -923,7 +941,7 @@ ul.drop-down-list a:hover {
   transition: background-color .7s, background-image .3s ease-in-out;
   background-image: url(../img/main-slider/icecream-slide-1.png);
   background-repeat: no-repeat;
-  background-position: 271px -3px;
+  background-position: center -3px;
   background-color: #849d8f;
 }
 
@@ -933,7 +951,7 @@ ul.drop-down-list a:hover {
   transition: background-color .7s, background-image .3s ease-in-out;
   background-image: url(../img/main-slider/icecream-slide-2.png);
   background-repeat: no-repeat;
-  background-position: 271px -3px;
+  background-position: center -3px;
   background-color: #849d8f;
 }
 
@@ -943,7 +961,7 @@ ul.drop-down-list a:hover {
   transition: background-color .7s, background-image .3s ease-in-out;
   background-image: url(../img/main-slider/icecream-slide-3.png);
   background-repeat: no-repeat;
-  background-position: 271px -3px;
+  background-position: center -3px;
   background-color: #849d8f;
 }
 
@@ -1079,7 +1097,9 @@ ul.drop-down-list a:hover {
   position: relative;
 }
 
-
+.image-wrapper-relative {
+  position: relative;
+}
 
 .item-wrapper {
   position: relative;
@@ -1108,9 +1128,10 @@ ul.drop-down-list a:hover {
   display: -ms-flexbox;
   display: flex;
 
+  margin: 0;
   position: absolute;
   left: 0;
-  bottom: 9%;
+  bottom: 20px;
 
   font-weight: bold;
   font-size: 45px;
@@ -1140,7 +1161,7 @@ ul.drop-down-list a:hover {
 }
 
 .icecream-name {
-  margin-top: 13px;
+  margin-top: 7px;
   margin-bottom: 0;
 
   font-weight: 200;
@@ -1480,10 +1501,13 @@ p.phone-order {
   height: 100px;
 }
 
+.catalog-footer .container {
+    border-top: 1px solid rgba(255, 255, 255, .3);
+}
+
 .page-footer .container {
   height: 100%;
 
-  border-top: 1px solid rgba(255, 255, 255, .3);
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
@@ -1509,7 +1533,7 @@ p.phone-order {
   margin: 0;
   padding: 0;
 
-  margin-top: 6px;
+  margin-top: 7px;
   margin-left: 2px;
 
   list-style: none;
@@ -1866,11 +1890,12 @@ p.phone-order {
 }
 
 .items-list li:hover .item-wrapper::before,
-.items-list li:hover .item-wrapper:before {
+.items-list li:focus .item-wrapper::before {
   display: block;
 }
 
-.items-list li:hover .item-wrapper{
+.items-list li:hover .item-wrapper,
+.items-list li:focus .item-wrapper{
   overflow: visible;
 }
 
@@ -1908,8 +1933,7 @@ p.phone-order {
   z-index: 2;
 }
 
-.item-wrapper:hover img,
-.item-wrapper:hover .price,
+.item-wrapper:hover .image-wrapper-relative,
 .item-wrapper:hover .icecream-name {
   z-index: 3;
 }
