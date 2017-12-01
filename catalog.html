@@ -44,7 +44,7 @@
               <div class="search-form-wrapper">
                 <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                   <label class="visually-hidden" for="search-text-field">Поиск</label>
-                  <input type="text" id="search-text-field" name="search-text" placeholder="Что ищем?">
+                  <input type="text"  id="search-text-field" class="form-text-field" name="search-text" placeholder="Что ищем?">
                 </form>
               </div>
             </li>
@@ -64,10 +64,10 @@
               <div class="login-form-wrapper">
                 <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                   <label for="log-email" class="visually-hidden">Ваша электронная почта для логина</label>
-                  <input type="email" id="log-email" name="email" placeholder="Электронная почта">
+                  <input type="email" class="form-text-field" id="log-email" name="email" placeholder="Электронная почта">
 
                   <label for="log-password"  class="visually-hidden">Ваш пароль для логина</label>
-                  <input type="password" id="log-password" name="password" placeholder="Пароль">
+                  <input type="password" class="form-text-field" id="log-password" name="password" placeholder="Пароль">
                   <div class="button-and-link-wrapper">
                     <input class="button" type="submit" value="Войти">
                     <div class="login-form-link-wrapper">
@@ -153,7 +153,14 @@
             <!-- Бегунок по цене -->
             <div class="radio-wrapper">
               <label for="tempradio">Цена: 100 руб. – 500 руб.</label><br>
-              <input name="price-range" id="tempradio" type="range" min="100" max="500">
+              <div class="radio-substrate">
+                <div class="main-line">
+                  <div class="selected-line">
+                    <div class="left-slider"></div>
+                    <div class="right-slider"></div>
+                  </div>
+                </div>
+              </div>
             </div>
             <!-- Выбор жирности -->
             <div class="sort-fat-wrapper">

@@ -374,8 +374,8 @@
           <h3 class="visually-hidden">Для поставщиков</h3>
     			<ul class="for-providers-list">
     				<li><a class="for-providers-link" href="#">Для поставщиков</a></li>
-    				<li><a href="#">Наши документы</a></li>
     				<li><a href="#">О производстве</a></li>
+            <li><a href="#">Наши документы</a></li>
     				<li><a href="#">Экологические стандарты</a></li>
     			</ul>
     			<!-- Копирайт -->
@@ -388,21 +388,22 @@
   		</footer>
   		<!-- Конец подвала сайта -->
   		<!-- Разметка попапа -->
-  		<section class="popup feedback-form visually-hidden">
+      <div class="backdrop-shadow"></div>
+  		<section class="popup feedback-form-wrapper visually-hidden">
         <h2 class="visually-hidden">Форма обратной связи</h2>
   			<b>Мы обязательно вам ответим!</b>
-  			<form action="https://echo.htmlacademy.ru" method="post">
+  			<form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
           <label for="form-fullname" class="visually-hidden">Ваше имя:</label>
-  				<input type="text" class="form-text-field" id="form-fullname" name="fullname" placeholder="Как вас зовут?">
+  				<input type="text" class="feedback-input form-text-field" id="form-fullname" name="fullname" placeholder="Как вас зовут?">
 
           <label for="form-email" class="visually-hidden">Ваша электронная почта:</label>
-  				<input type="email" class="form-text-field" name="email" id="form-email" placeholder="Ваша почта для ответа?">
+  				<input type="email" class="feedback-input form-text-field" name="email" id="form-email" placeholder="Ваша почта для ответа?">
 
           <label for="form-text" class="visually-hidden">Ваше сообщение:</label>
   				<textarea name="feedback-text" class="form-text-field" id="form-text" placeholder="Напишите что-нибудь..."></textarea>
   				<input type="submit" class="button" value="Отправить">
-  			</form>
-  			<button type="button" class="popup-close">Закрыть</button>
+  			  <button type="button" class="popup-close">Закрыть</button>
+        </form>
   		</section>
     </div>
 	</body>
