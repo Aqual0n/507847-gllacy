@@ -28,6 +28,8 @@
 
 /*Глобальные стили*/
 
+
+
 .catalog-body {
   background-color: #95ab9f;
 }
@@ -77,19 +79,17 @@ a {
   color: #fff;
 }
 
-a:not(.button):hover,
-a:not(.button):focus,
+a:not(.button):not(.item-wrapper):hover,
+a:not(.button):not(.item-wrapper):focus,
 .breadcrumbs a.crumb:hover,
 .breadcrumbs a.crumb:focus {
   color: #e84d37;
 }
 
-.pagination-item a:hover,
-.pagination-item a:focus{
+.pagination-item a[href]:hover,
+.pagination-item a[href]:focus{
   color: #fff;
 }
-
-
 
 .item-wrapper img{
   border-radius: 50%;
@@ -141,6 +141,7 @@ input.button {
   line-height: 44px;
   width: 200px;
   font-size: 18px;
+  cursor: pointer;
 }
 
 /*Стили для хедера*/
@@ -166,10 +167,10 @@ input.button {
   font-weight: bold;
 }
 
-.topper:hover > a,
-.topper:focus > a,
-.topper > a:hover,
-.topper > a:focus {
+li.topper:hover > a[href],
+li.topper:focus > a[href],
+li.topper > a[href]:hover,
+li.topper > a[href]:focus {
   text-decoration: none;
   outline: none;
   background-color: #fff;
@@ -188,8 +189,8 @@ a.main-nav-current {
   text-decoration: none;
 }
 
-.topper > a:hover,
-.topper > a:focus {
+li.topper > a[href="#"]:hover,
+li.topper > a[href="#"]:focus {
   color: #000;
 }
 
@@ -269,7 +270,7 @@ ul.drop-down-list a {
   color: #000;
 }
 
-ul.drop-down-list a:hover {
+ul.drop-down-list a[href]:hover {
   color: #000;
 }
 
@@ -377,12 +378,12 @@ ul.drop-down-list a:hover {
   color: #000;
 }
 
-.login > a:hover,
-.cart-empty > a:hover,
-.cart > a:hover,
-.login > a:focus,
-.cart-empty > a:focus,
-.cart > a:focus {
+.login > a[href]:hover,
+.cart-empty > a[href]:hover,
+.cart > a[href]:hover,
+.login > a[href]:focus,
+.cart-empty > a[href]:focus,
+.cart > a[href]:focus {
   background-color: #fff;
   color: #000;
 }
@@ -444,7 +445,6 @@ ul.drop-down-list a:hover {
 }
 
   /*Форма поиска*/
-
 .search-form-wrapper {
   display: none;
 }
@@ -1104,6 +1104,8 @@ ul.drop-down-list a:hover {
 }
 
 .item-wrapper {
+  cursor: default;
+
   position: relative;
   display: -moz-flex;
   display: -ms-flex;
@@ -1185,7 +1187,7 @@ ul.drop-down-list a:hover {
   padding-top: 25px;
   padding-bottom: 22px;
   padding-left: 21px;
-  padding-right: 19px;
+  padding-right: 22px;
 
   margin-bottom: 40px;
 
@@ -1342,16 +1344,15 @@ span.feature-text {
 
   background-image:
     url(../img/backgrounds/dispath-bg.png),
-    repeating-linear-gradient(135deg,
-      #fe9e90 0px,
-      #fe9e90 5px,
-      #fff 5px,
+    repeating-linear-gradient(134deg,
+      #fe9e90 -4px,
+      #fe9e90 3px,
+      #fff 3px,
       #fff 10px,
       #92cdff 10px,
-      #92cdff 15px,
-      #fff 15px,
-      #fff 20px);
-
+      #92cdff 17px,
+      #fff 17px,
+      #fff 24px);
   background-position: 5px 4px, top left;
 
   background-repeat: no-repeat;
@@ -1850,9 +1851,6 @@ p.phone-order {
 
 /*Каталог*/
 
-/*.page-header.catalog-header {
-}*/
-
 .items .container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1885,18 +1883,19 @@ p.phone-order {
 }
 
 .item-wrapper {
-  max-height: 405px;
+  max-height: 406px;
 
   overflow: hidden;
 }
 
-.items-list li:hover .item-wrapper::before,
-.items-list li:focus .item-wrapper::before {
+.items-list .item-wrapper:hover::before,
+.items-list .item-wrapper:focus::before {
   display: block;
 }
 
-.items-list li:hover .item-wrapper,
-.items-list li:focus .item-wrapper{
+.items-list  .item-wrapper:hover,
+.items-list  .item-wrapper:focus{
+  outline: none;
   overflow: visible;
 }
 
@@ -1935,7 +1934,9 @@ p.phone-order {
 }
 
 .item-wrapper:hover .image-wrapper-relative,
-.item-wrapper:hover .icecream-name {
+.item-wrapper:hover .icecream-name,
+.item-wrapper:focus .image-wrapper-relative,
+.item-wrapper:focus .icecream-name {
   z-index: 3;
 }
 
@@ -2013,8 +2014,8 @@ p.phone-order {
   background-color: rgba(255, 255, 255, .2)
 }
 
-.pagination-item-current a,
-.pagination a:active {
+.pagination-item.pagination-item-current a[href],
+.pagination a[href]:active {
   color: #000;
   background-color: #fff;
 }

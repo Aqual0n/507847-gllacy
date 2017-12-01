@@ -55,7 +55,7 @@
                 <div class="search-form-wrapper">
                   <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
                     <label class="visually-hidden" for="search-text-field">Поиск</label>
-                    <input type="text" id="search-text-field" name="search-text" placeholder="Что ищем?">
+                    <input type="text" class="form-text-field" id="search-text-field" name="search-text" placeholder="Что ищем?">
                   </form>
                 </div>
               </li>
@@ -75,10 +75,10 @@
                 <div class="login-form-wrapper">
                   <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                     <label for="log-email" class="visually-hidden">Ваша электронная почта для логина</label>
-                    <input type="email" id="log-email" name="email" placeholder="Электронная почта">
+                    <input type="email" class="form-text-field" id="log-email" name="email" placeholder="Электронная почта">
 
-                    <label for="log-password"  class="visually-hidden">Ваш пароль для логина</label>
-                  	<input type="password" id="log-password" name="password" placeholder="Пароль">
+                    <label for="log-password" class="visually-hidden">Ваш пароль для логина</label>
+                  	<input type="password" id="log-password" class="form-text-field" name="password" placeholder="Пароль">
                     <div class="button-and-link-wrapper">
                       <input class="button" type="submit" value="Войти">
                       <div class="login-form-link-wrapper">
@@ -175,49 +175,49 @@
     			<section class="popular-items">
     				<h2 class="visually-hidden">Популярные товары</h2>
     				<ul class="popular-items-list items-list">
-    					<li tabindex="0">
-                <div class="item-wrapper">
+    					<li>
+                <a class="item-wrapper" href="#">
                   <div class="image-wrapper-relative">
       						  <img width="267" height="267" src="img/icecreams/icecream-1.jpg" alt="Фото сливочного мороженого с апельсиновым джемом и цитрусовой стружкой">
                     <p class="price">310<span class="weight">/кг</span></p>
                   </div>
 
       						<p class="icecream-name">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-                  <a href="#" class="button">Быстрый просмотр</a>
-                </div>
+                  <span class="button">Быстрый просмотр</span>
+                </a>
     					</li>
     					<li>
-                <div class="item-wrapper">
+                <a class="item-wrapper" href="#">
                   <div class="image-wrapper-relative">
       						  <img width="267" height="267" src="img/icecreams/icecream-2.jpg" alt="Фото сливочного мороженого с кусочками шоколада">
                     <p class="price">380<span class="weight">/кг</span></p>
                   </div>
 
       						<p class="icecream-name">Сливочно-кофейное с кусочками шоколада</p>
-                  <a href="#" class="button">Быстрый просмотр</a>
-                </div>
+                  <span class="button">Быстрый просмотр</span>
+                </a>
     					</li>
     					<li>
-                <div class="item-wrapper">
+                <a class="item-wrapper" href="#">
                   <div class="image-wrapper-relative">
       						  <img width="267" height="267" src="img/icecreams/icecream-3.jpg" alt="Фото сливочно-клубничного мороженого с присыпкой из белого шоколада">
                     <p class="price">355<span class="weight">/кг</span></p>
                   </div>
 
       						<p class="icecream-name">Сливочно-клубничное с присыпкой из белого шоколада</p>
-                  <a href="#" class="button">Быстрый просмотр</a>
-                </div>
+                  <span class="button">Быстрый просмотр</span>
+                </a>
     					</li>
     					<li>
-                <div class="item-wrapper">
+                <a class="item-wrapper" href="#">
                   <div class="image-wrapper-relative">
       						  <img width="267" height="267" src="img/icecreams/icecream-4.jpg" alt="Фото сливочного крем-брюле с карамельной подливкой">
                     <p class="price">415<span class="weight">/кг</span></p>
                   </div>
 
       						<p class="icecream-name">Сливочное крем-брюле с карамельной подливкой</p>
-                  <a href="#" class="button">Быстрый просмотр</a>
-                </div>
+                  <span class="button">Быстрый просмотр</span>
+                </a>
     					</li>
     				</ul>
     			</section>
@@ -268,7 +268,7 @@
       				<h2 class="visually-hidden">Подписка на рассылку</h2>
       				<p class="dispath-description">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
       				<form action="https://echo.htmlacademy.ru" class="dispath-form" method="post">
-      					<input type="email" name="dispath-email" placeholder="Электронная почта">
+      					<input type="email" class="form-text-field" name="dispath-email" placeholder="Электронная почта">
       					<input class="button" type="submit" value="Отправить">
       				</form>
       			</section>
@@ -393,13 +393,13 @@
   			<b>Мы обязательно вам ответим!</b>
   			<form action="https://echo.htmlacademy.ru" method="post">
           <label for="form-fullname" class="visually-hidden">Ваше имя:</label>
-  				<input type="text" id="form-fullname" name="fullname" placeholder="Как вас зовут?">
+  				<input type="text" class="form-text-field" id="form-fullname" name="fullname" placeholder="Как вас зовут?">
 
           <label for="form-email" class="visually-hidden">Ваша электронная почта:</label>
-  				<input type="email" name="email" id="form-email" placeholder="Ваша почта для ответа?">
+  				<input type="email" class="form-text-field" name="email" id="form-email" placeholder="Ваша почта для ответа?">
 
           <label for="form-text" class="visually-hidden">Ваше сообщение:</label>
-  				<textarea name="feedback-text" id="form-text" placeholder="Напишите что-нибудь..."></textarea>
+  				<textarea name="feedback-text" class="form-text-field" id="form-text" placeholder="Напишите что-нибудь..."></textarea>
   				<input type="submit" class="button" value="Отправить">
   			</form>
   			<button type="button" class="popup-close">Закрыть</button>
