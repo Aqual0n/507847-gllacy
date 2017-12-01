@@ -796,7 +796,7 @@ ul.drop-down-list a:hover {
   line-height: 41px;
   font-weight: bold;
   margin-top: 0;
-  margin-bottom: 23px;
+  margin-bottom: 26px;
 }
 
 /*Сетка всего хедера*/
@@ -1155,12 +1155,12 @@ ul.drop-down-list a:hover {
   font-size: 30px;
 }
 
-.weight::before {
+/*.weight::before {
   content: url(../img/icons/ruble-icon.svg);
   display: inline-block;
 
   height: 31px;
-}
+}*/
 
 .icecream-name {
   margin-top: 7px;
@@ -1169,7 +1169,7 @@ ul.drop-down-list a:hover {
   font-weight: 200;
   text-decoration: underline;
   text-align: center;
-  width: 100%;
+  width: 96%;
 
   padding-left: 5px;
   padding-right: 5px;
@@ -1688,7 +1688,7 @@ p.phone-order {
   font-size: 14px;
   line-height: 16px;
   margin: 0;
-  margin-bottom: 9px;
+  margin-bottom: 7px;
   display: inline-block;
   margin-left: 16px;
 }
@@ -1850,9 +1850,8 @@ p.phone-order {
 
 /*Каталог*/
 
-.page-header.catalog-header {
-    margin-bottom: 3px;
-}
+/*.page-header.catalog-header {
+}*/
 
 .items .container {
   display: -webkit-box;
@@ -1864,7 +1863,7 @@ p.phone-order {
 
 .items-list {
   margin: 0;
-  margin-bottom: 48px;
+  margin-bottom: 43px;
   padding: 0;
 
   list-style: none;
@@ -1952,7 +1951,7 @@ p.phone-order {
 }
 
 .items-list li {
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 }
 
 /*Пагинация*/
