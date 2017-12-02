@@ -1993,6 +1993,10 @@ p.phone-order {
   box-sizing: border-box;
 }
 
+.selection::-ms-expand {
+  display: none;
+}
+
 .selection:focus,
 .selection:hover {
   color: #000;
