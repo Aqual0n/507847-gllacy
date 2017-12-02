@@ -499,6 +499,13 @@ ul.drop-down-list a[href]:hover {
   border: 1px solid #d3d3d2;
 }
 
+.search-form input[type="text"]::-webkit-input-placeholder {font-style: 14px;}
+.search-form input[type="text"]::-moz-placeholder {font-style: 14px;}
+.search-form input[type="text"]:-moz-placeholder  {font-style: 14px;}
+.search-form input[type="text"]:-ms-input-placeholder {font-style: 14px;}
+
+
+
 /*Логин*/
 
   /*Форма*/
@@ -565,10 +572,10 @@ ul.drop-down-list a[href]:hover {
   border-radius: 6px;
 }
 
-.login-form input:not(.button)::-webkit-input-placeholder {
-  font-size: 14px;
-}
-
+.login-form input:not(.button)::-webkit-input-placeholder {font-size: 14px;}
+.login-form input:not(.button)::-moz-placeholder{font-size: 14px;}
+.login-form input:not(.button):-moz-placeholder{font-size: 14px;}
+.login-form input:not(.button):-ms-input-placeholder{font-size: 14px;}
 .login-form .button{
   width: 100px;
   height: 44px;
@@ -1963,6 +1970,8 @@ p.phone-order {
 
 .selection {
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border: none;
   width: 193px;
   height: 36px;
@@ -2248,11 +2257,10 @@ input.form-text-field:hover {
   border: 2px solid #c7c6c5;
 }
 
-input.form-text-field::-webkit-input-placeholder {
-  font-weight: normal;
-  font-size: 16px;
-  color: #999999;
-}
+input.form-text-field::-webkit-input-placeholder {font-weight: normal; font-size: 16px; color: #999999;}
+input.form-text-field::-moz-placeholder{font-weight: normal; font-size: 16px; color: #999999;}
+input.form-text-field:-moz-placeholder{font-weight: normal; font-size: 16px; color: #999999;}
+input.form-text-field:-ms-input-placeholder{font-weight: normal; font-size: 16px; color: #999999;}
 
 input.form-text-field:focus {
   outline: none;
@@ -2380,11 +2388,10 @@ input.form-text-field:focus {
   border: 2px solid #8fbdec;
 }
 
-.feedback-form textarea::-webkit-input-placeholder {
-  font-weight: normal;
-  font-size: 16px;
-  color: #999999;
-}
+.feedback-form textarea::-webkit-input-placeholder {font-weight: normal; font-size: 16px; color: #999999;}
+.feedback-form textarea::-moz-placeholder{font-weight: normal; font-size: 16px; color: #999999;}
+.feedback-form textarea:-moz-placeholder{font-weight: normal; font-size: 16px; color: #999999;}
+.feedback-form textarea:-ms-input-placeholder{font-weight: normal; font-size: 16px; color: #999999;}
 
 .feedback-form textarea:hover {
   border: 2px solid #c7c6c5;
