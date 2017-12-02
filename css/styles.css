@@ -1002,7 +1002,7 @@ ul.drop-down-list a[href]:hover {
   background-image: url(../img/main-slider/icecream-slide-2.png);
   background-repeat: no-repeat;
   background-position: center -3px;
-  background-color: #849d8f;
+  background-color: #8996a6;
 }
 
 .slide-toggle-3:checked ~ .wrapper {
@@ -1012,7 +1012,7 @@ ul.drop-down-list a[href]:hover {
   background-image: url(../img/main-slider/icecream-slide-3.png);
   background-repeat: no-repeat;
   background-position: center -3px;
-  background-color: #849d8f;
+  background-color: #9d8b84;
 }
 
 
