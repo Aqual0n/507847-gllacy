@@ -524,9 +524,6 @@ ul.drop-down-list a[href]:hover {
 .search-form input[type="text"]::-moz-placeholder {font-size: 14px;}
 .search-form input[type="text"]:-moz-placeholder  {font-size: 14px;}
 .search-form input[type="text"]:-ms-input-placeholder {font-size: 14px;}
-
-
-
 /*Логин*/
 
   /*Форма*/
@@ -2321,7 +2318,79 @@ input.form-text-field:focus {
 
   z-index: 4;
 
-  background-color: rgba(0, 0, 0, .2);
+  transition: background-color .3s ease-in;
+  background-color: rgba(0, 0, 0, .3);
+}
+
+@keyframes feedback-creep-appear{
+ 0% {
+    -webkit-transform: translate(100%, -50%);
+    -ms-transform: translate(100%, -50%);
+        transform: translate(100%, -50%);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+/*@keyframes feedback-creep-disappear{
+  0% {
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: translate(-100%, -50%);
+    -ms-transform: translate(-100%, -50%);
+        transform: translate(-100%, -50%);
+    opacity: 0;
+  }
+}*/
+
+.feedback-form-appear {
+  animation-name: feedback-creep-appear;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+
+/*.feedback-form-disappear {
+  animation-name: feedback-creep-disappear;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}*/
+
+@keyframes popup-wrong{
+ 0%, 100% {
+  transform: translate(-50%, -50%);
+ }
+
+ 20% {
+  transform: translate(-65%, -50%);
+ }
+
+ 40% {
+  transform: translate(-40%, -50%);
+ }
+
+ 60% {
+  transform: translate(-60%, -50%);
+ }
+
+ 80% {
+  transform: translate(-45%, -50%);
+ }
+
+}
+
+.wrong-fields {
+  animation-name: popup-wrong;
+  animation-duration: .5s;
 }
 
 .feedback-form-wrapper {
