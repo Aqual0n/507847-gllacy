@@ -30,6 +30,7 @@
 
 .wrapper {
   position: relative;
+  min-width: 900px;
 }
 
 .catalog-body {
@@ -841,6 +842,8 @@ ul.drop-down-list a[href]:hover {
 
 .header-logo {
   margin-right: 11px;
+  width: 180px;
+  height: 64px;
 }
 
 .main-nav-wrapper a[href="index.html"] {
@@ -1450,7 +1453,7 @@ span.feature-text {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 
-  background-size: 98.3% 96%, 100%;
+  background-size: 98% 96%, 100%;
 
   position: relative;
 }
@@ -1492,6 +1495,7 @@ span.feature-text {
 
 .dispath-form .button {
   min-width: 128px;
+  margin-left: 11px;
 }
 
 /*Адрес и карта*/
@@ -1542,6 +1546,7 @@ p.adress {
   font-weight: bold;
 
   line-height: 24px;
+  display: block;
 }
 
 .phone-number {
@@ -1755,7 +1760,7 @@ p.phone-order {
       -ms-flex-direction: column;
           flex-direction: column;
 
-  margin-bottom: 6px;
+  margin-bottom: 5px;
 }
 
 .copyright-text {
@@ -1765,6 +1770,10 @@ p.phone-order {
 
 .copyright-text a {
   text-decoration: underline;
+}
+
+.copyright-wrapper a[href="https://htmlacademy.ru/intensive/htmlcss"] {
+  height: 39px;
 }
 
 /*Форма сортировки в каталоге*/
@@ -2210,7 +2219,7 @@ p.phone-order {
 /*Пагинация*/
 
 .pagination {
-  margin: 0 -8px 24px auto;
+  margin: 0 -8px 28px auto;
   padding: 0;
 
   list-style: none;
