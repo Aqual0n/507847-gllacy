@@ -1815,9 +1815,8 @@ p.phone-order {
   line-height: 16px;
   margin: 0;
   margin-bottom: 7px;
-  display: inline-block;
+  display: block;
   margin-left: 16px;
-  vertical-align: top;
 }
 
 .sort-field label {
